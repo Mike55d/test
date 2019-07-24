@@ -1,0 +1,164 @@
+/* stylelint-disable */
+.t-title{
+    color: $main-color;
+    font-weight: bold;
+    font-size: rem(26px);
+    letter-spacing: normal;
+    text-transform: uppercase;
+    @include bp(sm) {
+        font-size: rem(32px);
+    }
+}
+.t-subtitle {
+    font-size: rem(22px);
+    color: $second-color; 
+    letter-spacing: normal;
+    font-weight: bold;
+    &.light {
+        font-weight: 300;
+    }
+    @include bp(sm) {
+        font-size: rem(28px);
+    }
+}
+.t-subtitle-2 {
+    font-size: rem(18px);
+    color: $text-color; 
+    letter-spacing: 1.06px;
+    font-weight: bold;
+}
+
+.t-paragraph {
+    font-size: rem(14px);
+    color: $text-color;
+    letter-spacing: 1px;
+    line-height: 20px;
+    @include bp(sm) {
+        font-size: rem(15px);
+    }
+}
+
+.t-content {
+
+    ul {
+        padding: 0;
+        li{
+            font-size: rem(14px);
+            position: relative;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            &:before {
+                content:"";
+                width: 6px;
+                height: 6px;
+                top: 0;
+                bottom: 0;
+                left: 2px;
+                margin: auto;
+                background-color: $main-color;
+                position: absolute;
+                border-radius: 50%;
+            }
+            @include bp(sm) {
+                font-size: rem(15px);
+            }
+        }
+    }
+    p {
+        @extend .t-paragraph;
+    }
+}
+
+.container {
+    @include max-bp(sm) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+.bg-fill {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+
+.bg-points {
+    background: radial-gradient(rgba($gray,.3) 2px, transparent 3px), radial-gradient(rgba($gray,.3) 2px, transparent 3px), transparent;
+    background-size: 40px 40px;
+    background-position: 60px 55px, 0px -5px;
+} 
+
+
+
+// PAGES
+.t-page {
+    @extend .py-6;
+    min-height: 500px;
+}
+
+// ICONS
+
+[class^="icon-"], [class*=" icon-"] { 
+    display: flex;
+    align-items: center;
+}
+
+.icon-circle {
+    @extend .f-center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: $main-color;
+    color: $white;
+    transition-duration: 250ms;
+    &:hover {
+        transition-duration: 150ms;
+        transform: scale(1.05);
+        box-shadow: 0 0.5rem 1rem rgba($main-color, 0.4) ;
+    }
+    &.green {
+        background-color: $green;
+        &:hover {
+            transition-duration: 150ms;
+            box-shadow: 0 0.5rem 1rem rgba($green, 0.4) ;
+        }
+    } 
+}
+
+[class^="figure-"], [class*=" figure-"] {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 8px; 
+    &:before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+    }
+}
+.figure-google-maps {
+    &:before {
+        background-image: url('/wp-content/uploads/img/google-maps.svg');
+    }
+}
+.figure-waze {
+    &:before {
+        background-image: url('/wp-content/uploads/img/waze.svg');
+    }
+    
+}
+
+
+// TOOLTIP
+.tooltip {
+    .arrow {
+        
+    }
+    .tooltip-inner {
+        background: $white;
+    }
+}

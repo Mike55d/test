@@ -1,0 +1,509 @@
+/* stylelint-disable */
+
+$breakpoints: (
+  xs: $sm,
+  sm: $md,
+  md: $lg,
+  lg: $xl
+);
+
+// Respond above.
+@mixin bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+@mixin max-bp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-botton-left {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+@mixin flex-botton-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+@mixin flex-top-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin flex-top-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+@mixin flex-center-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-center-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-top-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin flex-botton-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+// ---------------
+// HIDE ELEMENT
+// ---------------
+
+@mixin hide-sm {
+  @media (max-width: $break-medium) {
+    display: none !important;
+  }
+}
+
+@mixin hide-lg {
+  @media (min-width: $break-medium) {
+    display: none !important;
+  }
+}
+
+// ---------------
+// PADDING
+// ---------------
+@mixin p-1 {
+  padding: em(10px) !important;
+}
+
+@mixin p-2 {
+  padding: em(20px) !important;
+}
+
+@mixin p-3 {
+  padding: em(30px) !important;
+}
+
+@mixin p-4 {
+  padding: em(40px) !important;
+}
+
+@mixin p-5 {
+  padding: em(50px) !important;
+}
+
+@mixin p-6 {
+  padding: em(60px) !important;
+}
+
+@mixin pr-1 {
+  padding-right: em(10px) !important;
+}
+
+@mixin pr-2 {
+  padding-right: em(20px) !important;
+}
+
+@mixin pr-3 {
+  padding-right: em(30px) !important;
+}
+
+@mixin pr-4 {
+  padding-right: em(40px) !important;
+}
+
+@mixin pr-5 {
+  padding-right: em(50px) !important;
+}
+
+@mixin pr-6 {
+  padding-right: em(60px) !important;
+}
+
+@mixin pl-1 {
+  padding-left: em(10px) !important;
+}
+
+@mixin pl-2 {
+  padding-left: em(20px) !important;
+}
+
+@mixin pl-3 {
+  padding-left: em(30px) !important;
+}
+
+@mixin pl-4 {
+  padding-left: em(40px) !important;
+}
+
+@mixin pl-5 {
+  padding-left: em(50px) !important;
+}
+
+@mixin pl-6 {
+  padding-left: em(60px) !important;
+}
+
+@mixin py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@mixin py-1 {
+  padding-top: em(10px) !important;
+  padding-bottom: em(10px) !important;
+}
+
+@mixin py-2 {
+  padding-top: em(20px) !important;
+  padding-bottom: em(20px) !important;
+}
+
+@mixin py-3 {
+  padding-top: em(30px) !important;
+  padding-bottom: em(30px) !important;
+}
+
+@mixin py-4 {
+  padding-top: em(40px) !important;
+  padding-bottom: em(40px) !important;
+}
+
+@mixin py-5 {
+  padding-top: em(50px) !important;
+  padding-bottom: em(50px) !important;
+}
+
+@mixin py-6 {
+  padding-top: em(60px) !important;
+  padding-bottom: em(60px) !important;
+}
+
+@mixin px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@mixin px-1 {
+  padding-left: em(10px) !important;
+  padding-right: em(10px) !important;
+}
+
+@mixin px-2 {
+  padding-left: em(20px) !important;
+  padding-right: em(20px) !important;
+}
+
+@mixin px-3 {
+  padding-left: em(30px) !important;
+  padding-right: em(30px) !important;
+}
+
+@mixin px-4 {
+  padding-left: em(40px) !important;
+  padding-right: em(40px) !important;
+}
+
+@mixin px-5 {
+  padding-left: em(50px) !important;
+  padding-right: em(50px) !important;
+}
+
+@mixin pb-1 {
+  padding-bottom: em(10px) !important;
+}
+
+@mixin pb-0 {
+  padding-bottom: 0 !important;
+}
+
+@mixin pb-1 {
+  padding-bottom: em(10px) !important;
+}
+
+@mixin pb-2 {
+  padding-bottom: em(20px) !important;
+}
+
+@mixin pb-3 {
+  padding-bottom: em(30px) !important;
+}
+
+@mixin pb-4 {
+  padding-bottom: em(40px) !important;
+}
+
+@mixin pb-5 {
+  padding-bottom: em(50px) !important;
+}
+
+@mixin pt-1 {
+  padding-top: em(10px) !important;
+}
+
+@mixin pt-2 {
+  padding-top: em(20px) !important;
+}
+
+@mixin pt-3 {
+  padding-top: em(30px) !important;
+}
+
+@mixin pt-4 {
+  padding-top: em(40px) !important;
+}
+
+@mixin pt-5 {
+  padding-top: em(50px) !important;
+}
+
+@mixin rm-p {
+  padding: 0;
+}
+
+@mixin rm-m {
+  margin: 0;
+}
+
+@mixin rm-my {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin rm-mx {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@mixin max-width {
+  max-width: 100%;
+}
+
+// ---------------
+// MARGIN
+// ---------------
+
+@mixin mb-1 {
+  margin-bottom: em(10px);
+}
+
+@mixin mb-2 {
+  margin-bottom: em(20px);
+}
+
+@mixin mb-3 {
+  margin-bottom: em(30px);
+}
+
+@mixin mb-4 {
+  margin-bottom: em(40px);
+}
+
+@mixin mb-5 {
+  margin-bottom: em(50px);
+}
+
+@mixin mb-6 {
+  margin-bottom: em(60px);
+}
+
+@mixin mt-1 {
+  margin-top: em(10px);
+}
+
+@mixin mt-2 {
+  margin-top: em(20px);
+}
+
+@mixin mt-3 {
+  margin-top: em(30px);
+}
+
+@mixin mt-4 {
+  margin-top: em(40px);
+}
+
+@mixin mt-5 {
+  margin-top: em(50px);
+}
+
+@mixin my-1 {
+  margin-top: em(10px);
+  margin-bottom: em(10px);
+}
+
+@mixin my-2 {
+  margin-top: em(20px);
+  margin-bottom: em(20px);
+}
+
+@mixin my-3 {
+  margin-top: em(30px);
+  margin-bottom: em(30px);
+}
+
+@mixin my-4 {
+  margin-top: em(40px);
+  margin-bottom: em(40px);
+}
+
+@mixin my-5 {
+  margin-top: em(50px);
+  margin-bottom: em(50px);
+}
+
+@mixin mx-1 {
+  margin-right: em(10px);
+  margin-left: em(10px);
+}
+
+@mixin mx-2 {
+  margin-right: em(20px);
+  margin-left: em(20px);
+}
+
+@mixin mx-3 {
+  margin-right: em(30px);
+  margin-left: em(30px);
+}
+
+@mixin mx-4 {
+  margin-right: em(40px);
+  margin-left: em(40px);
+}
+
+@mixin mx-5 {
+  margin-right: em(50px);
+  margin-left: em(50px);
+}
+
+@mixin ml-1 {
+  margin-left: em(10px);
+}
+
+@mixin ml-2 {
+  margin-left: em(20px);
+}
+
+@mixin ml-3 {
+  margin-left: em(30px);
+}
+
+@mixin ml-4 {
+  margin-left: em(40px);
+}
+
+@mixin ml-5 {
+  margin-left: em(50px);
+}
+
+@mixin mr-1 {
+  margin-right: em(10px);
+}
+
+@mixin mr-2 {
+  margin-right: em(20px);
+}
+
+@mixin mr-3 {
+  margin-right: em(30px);
+}
+
+@mixin mr-4 {
+  margin-right: em(40px);
+}
+
+@mixin mr-5 {
+  margin-right: em(50px);
+}
+
+// ---------------
+// ICONS
+// ---------------
+
+@mixin mdi {
+  color: $black;
+}
+
+@mixin icon-sm {
+  font-size: em(16px);
+}
+
+@mixin icon-md {
+  font-size: em(32px);
+}
+
+@mixin icon-lg {
+  font-size: em(48px);
+}
+
+// ---------------
+// FONT WEIGHT
+// ---------------
+@mixin txt-bold {
+  font-weight: 700;
+}
+
+@mixin txt-semi-bold {
+  font-weight: 600;
+}
+
+@mixin txt-light {
+  font-weight: 400;
+}
+
+@mixin txt-thin {
+  font-weight: 100;
+}
+
+// ---------------
+// TEXT ALIGN
+// ---------------
+
+@mixin txt-left {
+  text-align: left;
+}
+
+@mixin txt-right {
+  text-align: right;
+}
+
+@mixin txt-center {
+  text-align: center;
+}

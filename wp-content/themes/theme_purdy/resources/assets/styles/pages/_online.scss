@@ -1,0 +1,54 @@
+/* stylelint-disable */
+.content-page-online {
+    position: relative;
+    min-height: 1100px;
+    .content-title {
+        //margin-bottom: 30px;
+    }
+    .content-items {
+        @extend .py-7;
+        z-index: 1px;
+        .block-item {
+            display: flex;
+            .item { 
+                @extend .shadow,.p-4,.pt-5,.mb-4;
+                background-color: $white;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                min-height: 175px;
+                
+                .title {
+                    min-height: 65px;
+                    margin-bottom: 10px;
+                    @include bp(sm) {
+                        min-height: 75px;
+                    }
+                }
+                .description {
+                    flex: 1;
+                    margin-bottom: 15px;
+                    min-height: 100px;
+                }
+                .button {
+                    @extend .f-center;
+                    .btn {
+                        width: 100%;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }  
+        }
+    }
+    &:before {
+        @extend .bg-points;
+        content: "";
+        width: 100%;
+        height: 220px;
+        position: absolute;
+        top: 115px;
+        left: 0;
+        z-index: 0;
+    }
+}

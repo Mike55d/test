@@ -1,0 +1,188 @@
+/* stylelint-disable */
+
+body {
+    font-family: $base-font-family;
+    font-size: $root-font-size ; 
+    color: $text-color;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+a{
+    text-decoration: none !important;
+}
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+// FLEXBOX
+
+.f-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-botton-left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.f-botton-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.f-top-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.f-top-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.f-center-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.f-center-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.f-top-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.f-botton-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+//TEXT STYLE 
+
+.txt-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// HIDE ELEMENT
+
+.hide-sm {
+    @include max-bp(md) {
+        display: none !important;
+    }
+}
+
+
+.hide-lg {
+    @include bp(md) {
+        display: none !important;
+    }
+}
+
+// PADDING
+
+@for $i from 0 through 7 {
+    .p-#{$i} {
+        padding: #{$i}0px;
+    }
+}
+
+@for $i from 0 through 7 {
+    .py-#{$i} {
+        padding-top: #{$i}0px;
+        padding-bottom: #{$i}0px;
+    }
+}
+@for $i from 0 through 7 {
+    .px-#{$i} {
+        padding-left: #{$i}0px;
+        padding-right: #{$i}0px;
+    }
+}
+@for $i from 0 through 7 {
+    .pb-#{$i} {
+        padding-bottom:  #{$i}0px;;
+    }
+}
+@for $i from 0 through 7 {
+    .pt-#{$i} {
+        padding-top:  #{$i}0px;;
+    }
+}
+
+// MARGIN
+
+@for $i from 0 through 7 {
+    .my-#{$i} {
+        margin-top: #{$i}0px;
+        margin-bottom: #{$i}0px;
+    }
+}
+
+@for $i from 0 through 7 {
+    .mx-#{$i} {
+        margin-left: #{$i}0px;
+        margin-right: #{$i}0px;
+    }
+}
+
+@for $i from 0 through 7 {
+    .mb-#{$i} {
+        margin-bottom:  #{$i}0px;
+    }
+}
+
+@for $i from 0 through 7 {
+    .mt-#{$i} {
+        margin-top:  #{$i}0px;
+    }
+}
+
+
+
+// ---------------
+// ICONS
+// ---------------
+
+.icon-sm {
+    font-size: 16px;
+}
+
+.icon-md {  
+    font-size: 24px;
+}
+
+.icon-lg {
+    font-size: 32px;
+}
+
+//BACKGROUND
+
+.bg-white {
+background-color: $white;
+}
+
+.bg-transparent {
+background-color: transparent;
+}
+
+

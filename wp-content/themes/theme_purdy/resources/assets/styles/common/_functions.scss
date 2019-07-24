@@ -1,0 +1,22 @@
+/* stylelint-disable */
+
+// Em calculator
+@function em($target) {
+  @return ( strip-unit($target) / strip-unit($root-font-size) ) + em;
+}
+
+// Rem calculator
+@function rem($target) {
+  @return ( strip-unit($target) / strip-unit($root-font-size) ) + rem;
+}
+
+// Percentage calculator
+@function calc-percentage($target, $context) {
+  @return ( strip-unit($target) / strip-unit($context) ) * 100% ;
+}
+
+// Strip unit
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+  
