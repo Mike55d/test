@@ -1,4 +1,59 @@
 /* stylelint-disable */
-.btn {
-    letter-spacing: 1px;
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in;
+    text-decoration: none;
+    font-weight: bold;
+    &:active {
+        text-decoration: underline!important;
+    }
+}
+
+.button-primary {
+    padding: 10px 20px;
+    background-color: $red;
+    color: $white;
+    &:hover {
+        background-color: darken($red, 10%);
+        color: $white;
+    }
+    &:active {
+        background-color: $red;
+        color: $white;
+    }
+}
+
+.button-arrow {
+    position: relative;
+    z-index: 2;
+    &:before {
+        top: -10%;
+        right: -10px;
+        position: absolute;
+        z-index: -1;
+        display: block;
+        content: '';
+        height: 120%;
+        width: 30px;
+        background-color: $red;
+        transform-origin: center right;
+        transform: scaleX(1);
+        transition: all 0.3s ease-in;
+    }
+    &:hover {
+        &:before {
+            transform: scaleX(3);
+            background-color: darken($red, 10%);
+        }
+    }
+    &:active {
+        &:before {
+            transform: scaleX(1);
+            background-color: $red;
+        }
+    }
 }

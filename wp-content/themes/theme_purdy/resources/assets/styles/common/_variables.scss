@@ -1,32 +1,29 @@
 /* stylelint-disable */
+
+
 /** Import Bootstrap functions */
+
 @import "~bootstrap/scss/functions";
+$red: #ed1c23;
+$cavalry: #8295bc;
+$nitro: #ffcb06;
+$dark-blue: #293147;
+$bg-blue: #1E2535;
+$bg-dark-blue: #121822;
+$light-blue: #47526D;
+$gray: #F3F3F3;
+$white: #fff;
+$main-color: $dark-blue;
+$second-color: $red;
+$text-color: $light-blue;
+$root-font-size: 16px;
+$theme-colors: ( primary: $main-color, secondary: $second-color);
+$base-font-family: 'Gotham';
 
-
-$blue : #005993;
-$blue-07 : #071F2F;
-$blue-F7 : #F7F9FF;
-$orange : #DF532A;
-$gray: #CCCCCC;
-$white : #fff;
-$green : #B9D137;
-$green-a4 : #A4BC22;
-$main-color : $blue;
-$second-color : $orange;
-$text-color : $blue-07;
-$root-font-size : 16px;
-$theme-colors: (
-  primary: $main-color,
-  secondary : $second-color
-);
-
-
-$base-font-family: 'Montserrat';
 /** Bootstrap navbar fix (https://git.io/fADqW) */
+
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
-
-
 // MEDIA QUERIES
 $sm: 576px;
 $md: 768px;
