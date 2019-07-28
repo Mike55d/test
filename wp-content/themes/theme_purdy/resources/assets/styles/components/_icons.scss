@@ -1,0 +1,87 @@
+/* stylelint-disable */
+
+i.icn {
+    display: inline-block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@for $i from 1 through 4 {
+    .icn-#{$i} {
+        height: #{$i}em;
+        width: #{$i}em;
+    }
+}
+
+.icn-plus {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-plus.svg");
+}
+
+.icn-message {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-message.svg");
+}
+
+.icn-phone {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-phone.svg");
+}
+
+.icn-x {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-x.svg");
+}
+
+.icn-instagram {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-instagram.svg");
+}
+
+.icn-youtube {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-youtube.svg");
+}
+
+.icn-twitter {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-twitter.svg");
+}
+
+.icn-facebook {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-facebook.svg");
+}
+
+.icn-profile-light {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-profile-light.svg");
+}
+
+.icn-profile-dark {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-profile-dark.svg");
+}
+
+.icn-play {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-play.svg");
+}
+
+.icn-wheel {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-wheel.svg");
+}
+
+.icn-chevron {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-chevron.svg");
+}
+
+.icn-car {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-car.svg");
+}
+
+.icn-key {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-key.svg");
+}
+
+.icn-lock {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-lock.svg");
+}
+
+.icn-tag {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-tag.svg");
+}
+
+.icn-bill {
+    background-image: url("/wp-content/themes/theme_purdy/img/icons/icon-bill.svg");
+}
