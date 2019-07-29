@@ -29,6 +29,7 @@ h2,
 h3,
 h4,
 h5 {
+    text-transform: uppercase;
     color: $dark-blue;
     font-weight: normal;
 }
@@ -47,4 +48,8 @@ p {
 
 .text-white {
     color: $white;
+}
+
+.text-red {
+    color: $red;
 }

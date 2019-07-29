@@ -2,7 +2,7 @@
 
 body {
     font-family: $base-font-family;
-    font-size: $root-font-size ; 
+    font-size: $root-font-size;
     color: $text-color;
 }
 
@@ -10,9 +10,11 @@ ul {
     list-style: none;
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none !important;
 }
+
 button {
     &:focus {
         outline: none;
@@ -20,7 +22,6 @@ button {
 }
 
 // FLEXBOX
-
 .f-center {
     display: flex;
     justify-content: center;
@@ -76,7 +77,6 @@ button {
 }
 
 //TEXT STYLE 
-
 .txt-truncate {
     white-space: nowrap;
     overflow: hidden;
@@ -84,13 +84,11 @@ button {
 }
 
 // HIDE ELEMENT
-
 .hide-sm {
     @include max-bp(md) {
         display: none !important;
     }
 }
-
 
 .hide-lg {
     @include bp(md) {
@@ -99,7 +97,6 @@ button {
 }
 
 // PADDING
-
 @for $i from 0 through 7 {
     .p-#{$i} {
         padding: #{$i}0px;
@@ -112,25 +109,29 @@ button {
         padding-bottom: #{$i}0px;
     }
 }
+
 @for $i from 0 through 7 {
     .px-#{$i} {
         padding-left: #{$i}0px;
         padding-right: #{$i}0px;
     }
 }
+
 @for $i from 0 through 7 {
     .pb-#{$i} {
-        padding-bottom:  #{$i}0px;;
+        padding-bottom : #{$i}0px;
+        ;
     }
 }
+
 @for $i from 0 through 7 {
     .pt-#{$i} {
-        padding-top:  #{$i}0px;;
+        padding-top : #{$i}0px;
+        ;
     }
 }
 
 // MARGIN
-
 @for $i from 0 through 7 {
     .my-#{$i} {
         margin-top: #{$i}0px;
@@ -147,27 +148,24 @@ button {
 
 @for $i from 0 through 7 {
     .mb-#{$i} {
-        margin-bottom:  #{$i}0px;
+        margin-bottom : #{$i}0px;
     }
 }
 
 @for $i from 0 through 7 {
     .mt-#{$i} {
-        margin-top:  #{$i}0px;
+        margin-top : #{$i}0px;
     }
 }
-
-
 
 // ---------------
 // ICONS
 // ---------------
-
 .icon-sm {
     font-size: 16px;
 }
 
-.icon-md {  
+.icon-md {
     font-size: 24px;
 }
 
@@ -176,13 +174,14 @@ button {
 }
 
 //BACKGROUND
-
 .bg-white {
-background-color: $white;
+    background-color: $white;
 }
 
 .bg-transparent {
-background-color: transparent;
+    background-color: transparent;
 }
 
-
+.bg-dark {
+    background-color: $dark-blue;
+}
