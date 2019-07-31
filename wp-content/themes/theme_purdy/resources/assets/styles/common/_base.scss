@@ -1,5 +1,9 @@
 /* stylelint-disable */
 
+#wpadminbar {
+    display: none!important;
+}
+
 body {
     font-family: $base-font-family;
     font-size: $root-font-size;
@@ -119,14 +123,14 @@ button {
 
 @for $i from 0 through 7 {
     .pb-#{$i} {
-        padding-bottom : #{$i}0px;
+        padding-bottom: #{$i}0px;
         ;
     }
 }
 
 @for $i from 0 through 7 {
     .pt-#{$i} {
-        padding-top : #{$i}0px;
+        padding-top: #{$i}0px;
         ;
     }
 }
@@ -148,13 +152,13 @@ button {
 
 @for $i from 0 through 7 {
     .mb-#{$i} {
-        margin-bottom : #{$i}0px;
+        margin-bottom: #{$i}0px;
     }
 }
 
 @for $i from 0 through 7 {
     .mt-#{$i} {
-        margin-top : #{$i}0px;
+        margin-top: #{$i}0px;
     }
 }
 

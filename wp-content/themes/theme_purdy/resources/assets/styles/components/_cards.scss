@@ -1,0 +1,29 @@
+/* stylelint-disable */
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    .card-icon {
+        margin: 10px;
+    }
+    .card-content {
+        padding: 10px;
+        background-color: $gray;
+    }
+}
+
+.card-social {
+    padding: 10px;
+    background-color: $bg-dark-blue;
+    align-items: flex-start;
+    p {
+        color: $white;
+    }
+}

@@ -1,3 +1,72 @@
 /* stylelint-disable */
 
-.main-header {}
+.main-header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 10;
+    height: 90px;
+}
+
+.header-logo {
+    display: inline-block;
+    color: transparent;
+    text-indent: -999px;
+    overflow: hidden;
+    width: 80px;
+    height: 50px;
+    background-image: url('/wp-content/themes/theme_purdy/img/logo-purdy-black.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    .nav-item {
+        margin: 10px;
+        position: relative;
+        &:after {
+            position: absolute;
+            height: 4px;
+            width: 60%;
+            bottom: -6px;
+            left: 50%;
+            content: '';
+            background-color: $red;
+            transition: all 0.3s ease-in;
+            transform-origin: center;
+            transform: translateX(-50%) scaleX(0);
+        }
+        a {
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        &:hover,
+        &:active,
+        &.active {
+            a {
+                color: $red;
+            }
+            &:after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+    }
+}
+
+.language-switcher {
+    a {
+        text-transform: uppercase;
+    }
+    li.current-lang {
+        display: none;
+    }
+}
