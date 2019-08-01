@@ -52,6 +52,7 @@ class FrontPage extends Controller
                 'content' => apply_filters('the_content', $post->post_content),
                 'title' => apply_filters('the_title', $post->post_title),
                 'thumbnail' => get_the_post_thumbnail($post->ID, 'large'),
+                'phone' => get_field('phone', $post->ID)
             ];
         }, $locations_items);
     }

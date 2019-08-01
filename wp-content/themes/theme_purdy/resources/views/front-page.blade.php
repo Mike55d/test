@@ -88,7 +88,9 @@
                         </div>
                         <div id="collapse{!! $loop->index !!}" class="collapse" aria-labelledby="heading{!! $loop->index !!}" data-parent="#accordion-locations">
                           <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            <ul>
+                              <li><strong>Teléfono</strong> {!! $location['phone'] !!}</li>
+                            </ul>
                           </div>
                         </div>
                       </div>
@@ -111,14 +113,5 @@
             </div>
           </div>
     </section>   
-    <h1>H1 style</h1>
-    <h2>H2 style</h2> 
-    <h3>H3 style</h3> 
-    <h4>H4 style</h4> 
-    <h5>H2 style</h5> 
-    <p>Simple paragraph</p>
-    <a href="" class="button button-primary">Button primary</a>
-    <br>
-    <a href="" class="button button-arrow">Ver más <i class="icn icn-1 icn-chevron"></i></a>
   </div>
 @endsection
