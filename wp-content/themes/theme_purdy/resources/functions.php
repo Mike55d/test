@@ -134,3 +134,11 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+
+if( function_exists('acf_add_options_page') ) {
+	
+    acf_add_options_page();
+    acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
+	
+}

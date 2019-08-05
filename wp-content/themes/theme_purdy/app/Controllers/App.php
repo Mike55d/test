@@ -30,4 +30,18 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function footerFields() 
+    {
+        return (object) array (
+            'facebook' => get_field('facebook', 'options'),
+            'twitter' => get_field('twitter', 'options'),
+            'youtube' => get_field('youtube', 'options'),
+            'terms_and_conditions' => get_field('terms_and_conditions', 'options'),
+            'instagram' => get_field('instagram', 'options'),
+            'privacy_policy' => get_field('privacy_policy', 'options'),
+            'cookies' => get_field('cookies', 'options')
+        );
+    }
+
 }

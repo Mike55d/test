@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a class="header-logo" href="#top">Grupo Purdy Motor</a>
+  <a class="logo" href="#top">Grupo Purdy Motor</a>
   <nav>
       <ul class="nav-list">
         <li class="nav-item active"><a href="#top">Inicio</a></li>

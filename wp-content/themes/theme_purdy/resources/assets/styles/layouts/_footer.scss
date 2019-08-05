@@ -1,3 +1,49 @@
 /* stylelint-disable */
 
-footer {}
+footer {
+    width: 100%;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.footer-social {
+    background-color: $transparent-gray;
+    padding: 20px 10px;
+    width: 100%;
+    text-align: center;
+    .footer-social-links {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            margin: 15px;
+        }
+    }
+}
+
+.footer-info {
+    background-color: $gray;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    align-items: center;
+    .footer-social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        li {
+            padding: 0 10px;
+            border-right: 1px solid $dark-blue;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    .copy {
+        font-weight: bold;
+        margin: 0;
+    }
+}

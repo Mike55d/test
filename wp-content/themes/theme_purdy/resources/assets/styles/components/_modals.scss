@@ -1,0 +1,32 @@
+/* stylelint-disable */
+
+.modal-dialog {
+    width: 90%;
+    max-width: 800px;
+    margin: 4em auto;
+}
+
+.modal-services {
+    .modal-content {
+        border: none;
+        border-radius: 0;
+        color: $white;
+    }
+    .modal-header {
+        background-color: $bg-dark-blue;
+        border-radius: 0;
+        display: block;
+        position: relative;
+        padding: 15px;
+        border-bottom: none;
+        .close {
+            color: $white;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .modal-body {
+        background-color: $bg-blue;
+    }
+}
