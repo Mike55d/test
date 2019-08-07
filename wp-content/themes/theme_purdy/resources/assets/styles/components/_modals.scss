@@ -6,6 +6,18 @@
     margin: 4em auto;
 }
 
+.modal-content {
+    position: relative;
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 99;
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+}
+
 .modal-services {
     .modal-content {
         border: none;
@@ -16,17 +28,21 @@
         background-color: $bg-dark-blue;
         border-radius: 0;
         display: block;
-        position: relative;
         padding: 15px;
         border-bottom: none;
-        .close {
-            color: $white;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
     }
     .modal-body {
         background-color: $bg-blue;
+        text-align: center;
+        padding: 40px 20px 60px;
+        min-height: 320px;
+    }
+}
+
+.modal-video {
+    iframe {
+        width: 100%;
+        height: auto;
+        min-height: 380px;
     }
 }

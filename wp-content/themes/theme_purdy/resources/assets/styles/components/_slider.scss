@@ -1,1 +1,21 @@
 /* stylelint-disable */
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+    align-items: flex-end;
+    padding: 20px;
+    justify-content: flex-end;
+    span {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+}
+
+.carousel-control-prev {
+    justify-content: flex-start;
+    span {
+        transform: rotate(180deg);
+    }
+}

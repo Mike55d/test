@@ -13,6 +13,8 @@ class FrontPage extends Controller
         $services_items = get_posts([
             'post_type' => 'services',
             'posts_per_page'=>'10',
+            'orderby' => 'date',
+            'order'   => 'ASC'
         ]);
 
         return array_map(function ($post) {

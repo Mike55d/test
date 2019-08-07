@@ -73,6 +73,12 @@ export default {
             $('#counter').text($(this).val().length);
         })
 
+        $('.idx').on('click', function() {
+            var index = parseInt($(this).attr('data-index'));
+            $('.carousel').carousel(index);
+            $('.carousel').carousel('pause');
+        })
+
     },
     finalize() {
         // JavaScript to be fired on the home page, after the init JS
