@@ -33,9 +33,15 @@
 }
 
 .card-social {
-    padding: 10px;
+    padding: 20px;
     background-color: $bg-dark-blue;
     align-items: flex-start;
+    min-height: 550px;
+    justify-content: space-around;
+    img {
+        margin: 0 auto;
+        width: 90%;
+    }
     p {
         color: $white;
     }

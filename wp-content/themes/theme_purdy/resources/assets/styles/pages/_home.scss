@@ -36,6 +36,7 @@ section {
 .skills-list {
     margin-top: 50px;
     padding: 0;
+    margin-left: 40px;
     li {
         position: relative;
         padding-left: 10px;
@@ -78,6 +79,7 @@ section {
     }
     @include bp (md) {
         margin-top: 100px;
+        margin-left: 0;
         display: flex;
         justify-content: center;
         li {

@@ -27,7 +27,9 @@
                   <div class="card-content">
                     <h3>{!! $services_item['title'] !!}</h3>
                     <p>{!! $services_item['content'] !!}</p>
-                    <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="{!! $loop->index !!}">Ver más <i class="icn icn-1 icn-chevron"></i></a>
+                    <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="{!! $loop->index !!}">
+                      @php echo(pll__("Ver más")) @endphp
+                      <i class="icn icn-1 icn-chevron"></i></a>
                   </div>
               </div>
             @endforeach
@@ -51,21 +53,43 @@
           </div>
         </div>
         <div class="social-slider">
-          @foreach($social_axis_loop as $social_item)
-          <div class="card card-social">
-            <h4 class="text-white">{!! $social_item['title'] !!}</h4>
-            <p class="text-white">{!! $social_item['content'] !!}</p>
-            <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white">Ver más <i class="icn icn-1 icn-chevron"></i></a>
-            <div class="collapse" id="social-collapse{!! $loop->index !!}">
-              <h5 class="text-white">Objetivos</h5>
-              <ul class="text-white p-0">
-                @foreach ( $social_item['objectives'] as $o)
-                  <li>{!! $o['objective'] !!}</li>
+            <div id="carousel-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+              
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                  @foreach($social_axis_loop as $social_item)
+                    <li data-target="#carousel-multi" data-slide-to="{!! $loop->index !!}" @if ($loop->first)class="active" @endif></li>
+                  @endforeach
+              </ol>
+              <!--/.Indicators-->
+            
+              <div class="carousel-inner v-2" role="listbox">
+                @foreach($social_axis_loop as $social_item)
+                <div class="carousel-item @if ($loop->first) active @endif">
+                  <div class="col-12 col-md-4">
+                    <div class="card card-social mb-2">
+                        {!! $social_item['thumbnail'] !!}
+                        <h4 class="text-white my-3">{!! $social_item['title'] !!}</h4>
+                        <p class="text-white">{!! strip_tags($social_item['content']) !!}</p>
+                        <div class="collapse" id="social-collapse{!! $loop->index !!}">
+                          <h5 class="text-white my-2">
+                              @php echo(pll__("Objetivos")) @endphp
+                          </h5>
+                          <ul class="text-white p-0 mb-5">
+                            @foreach ( $social_item['objectives'] as $o)
+                              <li>{!! $o['objective'] !!}</li>
+                            @endforeach
+                          </ul>
+                        </div>
+                        <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white">
+                          @php echo(pll__("Ver más")) @endphp 
+                          <i class="icn icn-1 icn-chevron"></i></a>
+                      </div>
+                    </div>
+                  </div>
                 @endforeach
-              </ul>
+              </div>
             </div>
-          </div>
-          @endforeach
         </div>
       </div>
     </section>
@@ -107,16 +131,26 @@
                         <div id="collapse{!! $loop->index !!}" class="collapse" aria-labelledby="heading{!! $loop->index !!}" data-parent="#accordion-locations">
                           <div class="card-body">
                             <ul>
-                              <li><i class="icn icn-1 icn-phone"></i><strong>Contacto</strong><br>Teléfono {!! $location['phone'] !!}</li>
-                              <li><i class="icn icn-1 icn-pin"></i><strong>Dirección</strong> {!! $location['address'] !!}</li>
-                              <li><i class="icn icn-1 icn-clock"></i><strong>Horario de Atención</strong> 
+                              <li><i class="icn icn-1 icn-phone"></i><strong>
+                                @php echo(pll__("Contacto")) @endphp
+                                </strong><br>
+                                @php echo(pll__("Teléfono")) @endphp
+                                {!! $location['phone'] !!}</li>
+                              <li><i class="icn icn-1 icn-pin"></i><strong>
+                                  @php echo(pll__("Dirección")) @endphp  
+                                </strong> {!! $location['address'] !!}</li>
+                              <li><i class="icn icn-1 icn-clock"></i><strong>
+                                  @php echo(pll__("Horario de Atención")) @endphp
+                                </strong> 
                                 <ul>
                                   @foreach ($location['schedule'] as $sc)
                                     <li>{!!$sc['days']!!}: {!! $sc['hours'] !!}</li>
                                   @endforeach
                                 </ul>
                               </li>
-                              <li><strong>Ir con: <br>
+                              <li><strong>
+                                @php echo(pll__("Ir con")) @endphp : 
+                                <br>
                                 <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
                                 <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
                               </li>
@@ -136,11 +170,13 @@
                   <h3 class="text-red">05</h3>
                   <h2 class="text-white">{!! $contact_fields->contact_title !!}</h2>
                   <p class="text-white">{!! $contact_fields->contact_description !!}</p>
-                  <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> Teléfono: {!! $contact_fields->contact_phone !!}</p>
+                  <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php echo(pll__("Teléfono")) @endphp: {!! $contact_fields->contact_phone !!}</p>
                   <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: {!! $contact_fields->contact_messenger !!}</p>
               </div>
               <div class="class-md-6">
-                  <h3 class="text-white">Envíanos un mensaje</h3>
+                  <h3 class="text-white">
+                    @php echo(pll__("Envíanos un mensaje")) @endphp
+                  </h3>
                   @shortcode( $contact_fields->contact_form )
               </div>
             </div>

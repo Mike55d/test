@@ -35,6 +35,8 @@ class FrontPage extends Controller
         $social_axis_items = get_posts([
             'post_type' => 'social_axis',
             'posts_per_page'=>'10',
+            'orderby' => 'date',
+            'order'   => 'ASC'
         ]);
 
         return array_map(function ($post) {
