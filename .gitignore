@@ -11,6 +11,7 @@ assets_docs/*
 wp-content/*
 !wp-content/mu-plugins/
 !wp-content/themes/
+!wp-content/uploads/
 wp-config.php
 
 # ignore these plugins
