@@ -1,0 +1,31 @@
+/*  stylelint-disable */
+
+.input-wrap {
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+    input,
+    textarea {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+        color: $white;
+    }
+    label {
+        position: absolute;
+        color: $white;
+        top: 25px;
+        left: 0;
+        transition: all 0.1s ease;
+        transform-origin: 0 0;
+        &.active {
+            transform: translateY(-25px) scale(0.8);
+        }
+    }
+    .counter-text {
+        color: $white;
+        text-align: right;
+        font-size: 0.8em;
+    }
+}

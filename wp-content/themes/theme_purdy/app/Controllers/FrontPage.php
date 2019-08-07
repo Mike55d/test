@@ -20,6 +20,10 @@ class FrontPage extends Controller
                 'content' => apply_filters('the_content', $post->post_content),
                 'title' => apply_filters('the_title', $post->post_title),
                 'thumbnail' => get_the_post_thumbnail($post->ID, 'large'),
+                'stat_number' => get_field('stat_number', $post->ID),
+                'stat_title' => get_field('stat_title', $post->ID),
+                'stat_description' => get_field('stat_description', $post->ID),
+                'icon' => get_field('icon', $post->ID)
             ];
         }, $services_items);
     }
@@ -54,7 +58,7 @@ class FrontPage extends Controller
                 'title' => apply_filters('the_title', $post->post_title),
                 'thumbnail' => get_the_post_thumbnail($post->ID, 'large'),
                 'phone' => get_field('phone', $post->ID),
-                'address' => get_field('adress', $post->ID),
+                'address' => get_field('address', $post->ID),
                 'schedule' => get_field('schedule', $post->ID),
                 'waze_link' => get_field('waze_link', $post->ID),
                 'google_maps_link' => get_field('google_maps_link', $post->ID)

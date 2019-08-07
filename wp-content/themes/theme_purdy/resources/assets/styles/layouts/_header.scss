@@ -2,8 +2,8 @@
 
 .main-header {
     position: fixed;
-    width: 100%;
-    padding: 20px 10px;
+    width: 100vw;
+    padding: 20px 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,25 @@
     left: 0;
     background-color: $white;
     z-index: 10;
-    height: 90px;
+    height: 150px;
+    flex-wrap: wrap;
+    .logo {
+        margin: 10px auto;
+    }
+    @include bp (md) {
+        padding: 20px 10px;
+        height: 90px;
+        .logo {
+            margin: 0;
+        }
+    }
+}
+
+.logo-container {
+    width: 100%;
+    @include bp (md) {
+        width: auto;
+    }
 }
 
 .logo {
@@ -27,9 +45,28 @@
     background-position: center center;
 }
 
+nav {
+    width: 100vw;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include bp (md) {
+        width: auto;
+    }
+}
+
 .nav-list {
     display: flex;
     justify-content: space-around;
+    width: 300vw;
+    overflow-x: scroll;
+    background-color: $gray;
+    padding: 0;
+    height: 60px;
     .nav-item {
         margin: 10px;
         position: relative;
@@ -50,7 +87,6 @@
             text-transform: uppercase;
         }
         &:hover,
-        &:active,
         &.active {
             a {
                 color: $red;
@@ -60,9 +96,15 @@
             }
         }
     }
+    @include bp (md) {
+        background-color: $white;
+        width: auto;
+        height: auto;
+    }
 }
 
 .language-switcher {
+    padding: 0;
     a {
         text-transform: uppercase;
     }

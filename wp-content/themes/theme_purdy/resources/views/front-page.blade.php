@@ -7,27 +7,27 @@
 
 @section('content')
   <div class="page-home">
-    <div class="hero d-md-none" id="top" style="background-image:url('{!! $hero_fields->hero_mobile !!}');">
+    <section class="hero d-md-none" id="top" style="background-image:url('{!! $hero_fields->hero_mobile !!}');">
       {!! $hero_fields->hero_text !!}
-    </div>
-    <div class="hero d-none d-md-flex" id="top" style="background-image:url('{!! $hero_fields->hero_desktop !!}');">
+    </section>
+    <section class="hero d-none d-md-flex" id="top" style="background-image:url('{!! $hero_fields->hero_desktop !!}');">
       {!! $hero_fields->hero_text !!}
-    </div>
+    </section>
     <section id="services">
       <div class="container">
         <h3 class="text-red">01</h3>
-        <h1>{!! $services_fields->services_title !!}</h1>
+        <h2>{!! $services_fields->services_title !!}</h2>
         <p>{!! $services_fields->services_description !!}</p>
-        <div class="f-center my-3"> 
+        <div class="card-container my-3"> 
             @foreach($services_loop as $services_item)
-              <div class="card card-link">
+              <div class="card card-service">
                   <div class="card-icon">
-                    <i class="icn icn-3 icn-tag"></i>
+                    <img src="{!! $services_item['icon'] !!}" aria-hidden="true">
                   </div>
                   <div class="card-content">
                     <h3>{!! $services_item['title'] !!}</h3>
                     <p>{!! $services_item['content'] !!}</p>
-                    <button data-toggle="modal" data-target="#ServicesModal" class="button button-arrow">Ver más <i class="icn icn-1 icn-chevron"></i></button>
+                    <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow">Ver más <i class="icn icn-1 icn-chevron"></i></a>
                   </div>
               </div>
             @endforeach
@@ -40,12 +40,12 @@
         <div class="row">
           <div class="col-md-6">
               <h3 class="text-red">02</h3>
-              <h1 class="text-white">{!! $social_fields->social_title !!}</h1>
+              <h2 class="text-white">{!! $social_fields->social_title !!}</h2>
               <p class="text-white">{!! $social_fields->social_description !!}</p>
           </div>
-          <div class="class-md-6">
+          <div class="col-md-6">
             <a class="video-container" href="#modal-video" data-src="{!! $social_fields->social_video !!}">
-                <img src="{!! $social_fields->social_video_thumbnail !!}" alt="Video thumbnail">
+                <img class="w-100" src="{!! $social_fields->social_video_thumbnail !!}" alt="Video thumbnail">
             </a>
           </div>
         </div>
@@ -71,7 +71,7 @@
     <section id="people">
         <div class="container">
           <h3 class="text-red">03</h3>
-          <h1>{!! $people_fields->people_title !!}</h1>
+          <h2>{!! $people_fields->people_title !!}</h2>
         
         <div class="row">
           <div class="col-md-6">
@@ -91,7 +91,7 @@
     <section id="locations">
         <div class="container">
             <h3 class="text-red">04</h3>
-            <h1>{!! $locations_fields->locations_title !!}</h1>
+            <h2>{!! $locations_fields->locations_title !!}</h2>
             <p>{!! $locations_fields->locations_description !!}</p>
             
             <div class="accordion row" id="accordion-locations">
@@ -106,17 +106,19 @@
                         <div id="collapse{!! $loop->index !!}" class="collapse" aria-labelledby="heading{!! $loop->index !!}" data-parent="#accordion-locations">
                           <div class="card-body">
                             <ul>
-                              <li><strong>Teléfono</strong> {!! $location['phone'] !!}</li>
-                              <li><strong>Dirección</strong> {!! $location['address'] !!}</li>
-                              <li><strong>Horario de Atención</strong> 
+                              <li><i class="icn icn-1 icn-phone"></i><strong>Contacto</strong><br>Teléfono {!! $location['phone'] !!}</li>
+                              <li><i class="icn icn-1 icn-pin"></i><strong>Dirección</strong> {!! $location['address'] !!}</li>
+                              <li><i class="icn icn-1 icn-clock"></i><strong>Horario de Atención</strong> 
                                 <ul>
                                   @foreach ($location['schedule'] as $sc)
-                                    <li><strong>{!!$sc['days']!!}:</strong> {!! $sc['hours'] !!}</li>
+                                    <li>{!!$sc['days']!!}: {!! $sc['hours'] !!}</li>
                                   @endforeach
                                 </ul>
                               </li>
-                              <li><strong>Waze</strong> {!! $location['waze_link'] !!}</li>
-                              <li><strong>Google Maps</strong> {!! $location['google_maps_link'] !!}</li>
+                              <li><strong>Ir con: <br>
+                                <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
+                                <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -126,17 +128,18 @@
               </div>
         </div>
     </section>  
-    <section id="contact" class="bg-dark">
+    <section id="contact" class="bg-dark py-5">
         <div class="container">
             <div class="row">
               <div class="col-md-6">
                   <h3 class="text-red">05</h3>
-                  <h1 class="text-white">{!! $contact_fields->contact_title !!}</h1>
+                  <h2 class="text-white">{!! $contact_fields->contact_title !!}</h2>
                   <p class="text-white">{!! $contact_fields->contact_description !!}</p>
-                  <p class="text-white"><strong>Teléfono:</strong> {!! $contact_fields->contact_phone !!}</p>
-                  <p class="text-white"><strong>Messenger:</strong> {!! $contact_fields->contact_messenger !!}</p>
+                  <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> Teléfono: {!! $contact_fields->contact_phone !!}</p>
+                  <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: {!! $contact_fields->contact_messenger !!}</p>
               </div>
               <div class="class-md-6">
+                  <h3 class="text-white">Envíanos un mensaje</h3>
                   @shortcode( $contact_fields->contact_form )
               </div>
             </div>
