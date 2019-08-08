@@ -127,7 +127,7 @@
                         </div>
                         <div id="collapse<?php echo $loop->index; ?>" class="collapse" aria-labelledby="heading<?php echo $loop->index; ?>" data-parent="#accordion-locations">
                           <div class="card-body">
-                            <ul>
+                            <ul class="location-list">
                               <li><i class="icn icn-1 icn-phone"></i><strong>
                                 <?php echo(pll__("Contacto")) ?>
                                 </strong><br>
@@ -160,24 +160,22 @@
               </div>
         </div>
     </section>  
-    <section id="contact" class="bg-dark py-5">
-        <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                  <h3 class="text-red">05</h3>
-                  <h2 class="text-white"><?php echo $contact_fields->contact_title; ?></h2>
-                  <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
-                  <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php echo(pll__("Teléfono")) ?>: <?php echo $contact_fields->contact_phone; ?></p>
-                  <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <?php echo $contact_fields->contact_messenger; ?></p>
-              </div>
-              <div class="class-md-6">
-                  <h3 class="text-white">
-                    <?php echo(pll__("Envíanos un mensaje")) ?>
-                  </h3>
-                  <?= do_shortcode($contact_fields->contact_form); ?>
-              </div>
-            </div>
+    <section id="contact" class="bg-dark py-5 container">
+        <div class="row">
+          <div class="col-md-6">
+              <h3 class="text-red">05</h3>
+              <h2 class="text-white"><?php echo $contact_fields->contact_title; ?></h2>
+              <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
+              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php echo(pll__("Teléfono")) ?>: <?php echo $contact_fields->contact_phone; ?></p>
+              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <?php echo $contact_fields->contact_messenger; ?></p>
           </div>
+          <div class="class-md-6">
+              <h3 class="text-white">
+                <?php echo(pll__("Envíanos un mensaje")) ?>
+              </h3>
+              <?= do_shortcode($contact_fields->contact_form); ?>
+          </div>
+        </div>
     </section>   
   </div>
 

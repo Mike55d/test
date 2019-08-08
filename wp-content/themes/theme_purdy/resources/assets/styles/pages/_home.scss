@@ -122,3 +122,9 @@ section {
         }
     }
 }
+
+.location-list {
+    &>li {
+        margin: 40px 0;
+    }
+}
