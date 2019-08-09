@@ -171,7 +171,7 @@
               <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php echo(pll__("Teléfono")) ?>: <?php echo $contact_fields->contact_phone; ?></p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <?php echo $contact_fields->contact_messenger; ?></p>
           </div>
-          <div class="class-md-6">
+          <div class="col-md-6">
               <h3 class="text-white">
                 <?php echo(pll__("Envíanos un mensaje")) ?>
               </h3>
