@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
-
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, but the page you were trying to view does not exist.', 'sage') }}
+  <div class="page-error">
+    <div class="my-5 text-center">
+      <h2 class="my-5">Página no encontrada / Page not found</h2>
+      <a class="button button-primary mb-5" href="/">Inicio / Home</a>
     </div>
-    {!! get_search_form(false) !!}
-  @endif
+</div>
 @endsection

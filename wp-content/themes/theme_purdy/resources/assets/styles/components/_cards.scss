@@ -20,14 +20,19 @@
         }
     }
     .card-content {
-        padding: 10px;
+        padding: 20px 10px 10px;
         background-color: $gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
+        height: 100%;
         h3 {
             font-size: 1.3em;
         }
         p {
             font-size: 0.8em;
+            margin-bottom: 0.2rem;
         }
     }
 }
@@ -44,5 +49,6 @@
     }
     p {
         color: $white;
+        width: 100%;
     }
 }

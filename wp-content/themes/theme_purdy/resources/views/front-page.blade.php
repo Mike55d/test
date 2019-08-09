@@ -7,16 +7,18 @@
 
 @section('content')
   <div class="page-home">
-    <section class="hero d-md-none" id="top" style="background-image:url('{!! $hero_fields->hero_mobile !!}');">
-      {!! $hero_fields->hero_text !!}
-    </section>
-    <section class="hero d-none d-md-flex" id="top" style="background-image:url('{!! $hero_fields->hero_desktop !!}');">
-      {!! $hero_fields->hero_text !!}
+    <section id="top">
+      <div class="hero d-md-none" style="background-image:url('{!! $hero_fields->hero_mobile !!}');">
+        {!! $hero_fields->hero_text !!}
+      </div>
+      <div class="hero d-none d-md-flex" style="background-image:url('{!! $hero_fields->hero_desktop !!}');">
+        {!! $hero_fields->hero_text !!}
+      </div>
     </section>
     <section id="services">
       <div class="container">
         <h3 class="text-red">01</h3>
-        <h2>{!! $services_fields->services_title !!}</h2>
+        <h1>{!! $services_fields->services_title !!}</h1>
         <p>{!! $services_fields->services_description !!}</p>
         <div class="card-container my-3"> 
             @foreach($services_loop as $services_item)
@@ -37,12 +39,12 @@
         </div>
       </div>
     </section>
-    <section id="social" class="bg-dark py-5">
+    <section id="social" class="bg-blue py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
               <h3 class="text-red">02</h3>
-              <h2 class="text-white">{!! $social_fields->social_title !!}</h2>
+              <h1 class="text-white">{!! $social_fields->social_title !!}</h1>
               <p class="text-white">{!! $social_fields->social_description !!}</p>
           </div>
           <div class="col-md-6">
@@ -81,8 +83,8 @@
                             @endforeach
                           </ul>
                         </div>
-                        <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white">
-                          @php echo(pll__("Ver más")) @endphp 
+                        <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white expand">
+                          <span>@php echo(pll__("Ver más")) @endphp</span> 
                           <i class="icn icn-1 icn-chevron"></i></a>
                       </div>
                     </div>
@@ -96,7 +98,7 @@
     <section id="people">
         <div class="container">
           <h3 class="text-red">03</h3>
-          <h2>{!! $people_fields->people_title !!}</h2>
+          <h1>{!! $people_fields->people_title !!}</h1>
         
         <div class="row">
           <div class="col-md-6">
@@ -116,7 +118,7 @@
     <section id="locations">
         <div class="container">
             <h3 class="text-red">04</h3>
-            <h2>{!! $locations_fields->locations_title !!}</h2>
+            <h1>{!! $locations_fields->locations_title !!}</h1>
             <p>{!! $locations_fields->locations_description !!}</p>
             
             <div class="accordion row" id="accordion-locations">
@@ -163,11 +165,11 @@
               </div>
         </div>
     </section>  
-    <section id="contact" class="bg-dark py-5 container">
+    <section id="contact" class="bg-blue py-5 container">
         <div class="row">
           <div class="col-md-6">
               <h3 class="text-red">05</h3>
-              <h2 class="text-white">{!! $contact_fields->contact_title !!}</h2>
+              <h1 class="text-white">{!! $contact_fields->contact_title !!}</h1>
               <p class="text-white">{!! $contact_fields->contact_description !!}</p>
               <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php echo(pll__("Teléfono")) @endphp: {!! $contact_fields->contact_phone !!}</p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: {!! $contact_fields->contact_messenger !!}</p>

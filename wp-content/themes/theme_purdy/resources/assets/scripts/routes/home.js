@@ -25,7 +25,7 @@ export default {
                         // $('.nav-item').removeClass('active');
                         // $(this).parent().addClass('active');
                         $('html, body').animate({
-                            scrollTop: target.offset().top - 100,
+                            scrollTop: target.offset().top - 200,
                         }, 500, function() {
                             // Callback after animation
                             // Must change focus!
@@ -42,7 +42,8 @@ export default {
                 }
             });
         $(window).bind('scroll', function() {
-            var currentTop = $(window).scrollTop() + 100;
+
+            var currentTop = $(window).scrollTop() + 150;
             var elems = $('section');
             elems.each(function() {
                 var elemTop = $(this).offset().top;
@@ -54,11 +55,25 @@ export default {
                     navElem.parent().addClass('active');
                 }
             });
-            //var currentLeft = $('nav').scrollLeft();
-            var offsetLeft = $('.nav-item.active').offset().left;
-            $('nav').animate({
-                scrollLeft: offsetLeft,
-            }, 50)
+
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function() {
+                var offset = $('.nav-item.active').offset().left - $(window).scrollLeft();
+                console.log(offset);
+                if (offset > window.innerWidth) {
+                    // Not in view so scroll to it
+                    $('nav').animate({
+                        scrollLeft: offset,
+                    }, 300)
+                    return false;
+                } else if (offset < 0) {
+                    $('nav').animate({
+                        scrollLeft: 0,
+                    }, 300)
+                    return false;
+                }
+                return true
+            }, 250));
         });
 
         $('.input-wrap input, .input-wrap textarea').on('focus input', function() {
@@ -94,6 +109,47 @@ export default {
                 next.children(':first-child').clone().appendTo($(this));
             }
         });
+
+        $('.text-only').keydown(function(e) {
+            if (e.shiftKey || e.ctrlKey || e.altKey) {
+                e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                    e.preventDefault();
+                }
+            }
+        });
+
+        $('.number-only').keydown(function(e) {
+            if (e.shiftKey || e.ctrlKey || e.altKey) {
+                e.preventDefault();
+            } else {
+                var key = e.keyCode;
+                if (!((key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                    e.preventDefault();
+                }
+            }
+        });
+
+        $('.expand').on('click', function(e) {
+            window.setTimeout(function() {
+                var link = $(e.target).closest('a')
+                if (window.location.pathname === '/es/') {
+                    if ($(link).hasClass('collapsed')) {
+                        $(link).find('span').text('Ver más');
+                    } else {
+                        $(link).find('span').text('Ver menos');
+                    }
+                } else if (window.location.pathname === '/en/') {
+                    if ($(link).hasClass('collapsed')) {
+                        $(link).find('span').text('See more');
+                    } else {
+                        $(link).find('span').text('See less');
+                    }
+                }
+            }, 100)
+        })
 
     },
     finalize() {

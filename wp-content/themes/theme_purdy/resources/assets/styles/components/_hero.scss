@@ -3,11 +3,17 @@
 .hero {
     height: 60vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    padding: 100px 20px;
+    padding: 100px 20px 20px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    @include bp (md) {
+        padding: 100px;
+        justify-content: center;
+        text-align: left;
+    }
 }

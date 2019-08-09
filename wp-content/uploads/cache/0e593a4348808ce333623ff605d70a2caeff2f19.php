@@ -10,6 +10,8 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+  <meta name="format-detection" content="telephone=no">
+
   
   <?php wp_head() ?>
 </head>

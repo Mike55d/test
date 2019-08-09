@@ -12,7 +12,7 @@
         <li class="nav-item"><a href="#social"><?php echo(pll__('Sostenibilidad')) ?></a></li>
         <li class="nav-item"><a href="#people"><?php echo(pll__('Gente Purdy')) ?></a></li>
         <li class="nav-item"><a href="#locations"><?php echo(pll__('Encontranos')) ?></a></li>
-        <li class="nav-item"><a href="#contact"><?php echo(pll__('Contacto')) ?></a></li>
+        <li class="nav-item"><a href="#contact"><?php echo(pll__('Contáctanos')) ?></a></li>
       </ul>
   </nav>
   <ul class="language-switcher d-none d-md-block">

@@ -186,6 +186,13 @@ button {
     background-color: transparent;
 }
 
-.bg-dark {
-    background-color: $dark-blue;
+.bg-blue {
+    background-color: $bg-blue;
+}
+
+.page-error {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

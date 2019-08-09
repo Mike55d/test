@@ -26,16 +26,18 @@ footer {
     background-color: $gray;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px 10px;
     align-items: center;
     flex-wrap: wrap;
     .footer-social-links {
+        flex-grow: 1;
+        flex-basis: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0;
-        margin: 0 auto;
+        text-align: center;
         li {
             padding: 0 10px;
             border-right: 1px solid $dark-blue;
@@ -44,8 +46,19 @@ footer {
             }
         }
     }
+    .logo {
+        display: none;
+        @include bp (md) {
+            display: block;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+    }
     .copy {
+        flex-grow: 1;
+        flex-basis: 0;
         font-weight: bold;
-        margin: 0;
+        margin: 20px 0;
+        text-align: right;
     }
 }
