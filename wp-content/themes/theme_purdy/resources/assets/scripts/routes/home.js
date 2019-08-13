@@ -106,7 +106,7 @@ export default {
                 e.preventDefault();
             } else {
                 var key = e.keyCode;
-                if (!((key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                if (!((key >= 48 && key <= 57) || (key >= 96 && key <= 105) || (key == 8))) {
                     e.preventDefault();
                 }
             }
