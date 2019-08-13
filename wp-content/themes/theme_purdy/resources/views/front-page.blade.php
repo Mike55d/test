@@ -224,7 +224,7 @@
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-1 icn-plus" aria-hidden="true"></i></button>
               <iframe id="ytplayer" type="text/html"
-              src="https://www.youtube.com/embed/{!! $social_fields->social_video !!}?autoplay=1"
+              src="https://www.youtube.com/embed/{!! $social_fields->social_video !!}?autoplay=0"
               frameborder="0"></iframe>
           </div>
         </div>
