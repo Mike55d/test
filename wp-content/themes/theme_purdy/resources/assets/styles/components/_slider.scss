@@ -3,9 +3,12 @@
 .carousel-control-prev,
 .carousel-control-next {
     opacity: 1;
-    align-items: flex-end;
+    align-items: center;
     padding: 20px;
     justify-content: flex-end;
+    top: auto;
+    height: 30px;
+    width: 20%;
     span {
         background-repeat: no-repeat;
         background-size: contain;

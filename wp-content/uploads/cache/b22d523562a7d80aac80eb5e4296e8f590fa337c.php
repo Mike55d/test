@@ -206,11 +206,11 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                   </div>
                   <a class="carousel-control-prev" href="#services-carousel" role="button" data-slide="prev">
-                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span> <?php echo e(_a('Anterior')); ?>
+                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span> <?php echo e(_e('Anterior')); ?>
 
                   </a>
                   <a class="carousel-control-next" href="#services-carousel" role="button" data-slide="next">
-                      <?php echo e(_a('Siguiente')); ?> <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
+                      <?php echo e(_e('Siguiente')); ?> <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
                   </a>
                 </div>
               
