@@ -97,6 +97,7 @@ nav {
         }
     }
     @include bp (md) {
+        overflow: hidden;
         background-color: $white;
         width: auto;
         height: auto;

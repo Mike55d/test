@@ -209,10 +209,10 @@
                     @endforeach
                   </div>
                   <a class="carousel-control-prev" href="#services-carousel" role="button" data-slide="prev">
-                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
+                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span> {{ _a('Anterior') }}
                   </a>
                   <a class="carousel-control-next" href="#services-carousel" role="button" data-slide="next">
-                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
+                      {{ _a('Siguiente') }} <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
                   </a>
                 </div>
               

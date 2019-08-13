@@ -24,8 +24,14 @@ export default {
                         event.preventDefault();
                         // $('.nav-item').removeClass('active');
                         // $(this).parent().addClass('active');
+                        var scrollAmount = 0;
+                        if (window.innerWidth < 768) {
+                            scrollAmount = target.offset().top - 160
+                        } else {
+                            scrollAmount = target.offset().top - 100
+                        }
                         $('html, body').animate({
-                            scrollTop: target.offset().top - 100,
+                            scrollTop: scrollAmount,
                         }, 500);
                     }
                 }
@@ -48,13 +54,13 @@ export default {
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
                 var offset = $('.nav-item.active').offset().left - $(window).scrollLeft();
-                if (offset > window.innerWidth && $(window).width < 768) {
+                if (offset > window.innerWidth && window.innerWidth < 768) {
                     // Not in view so scroll to it
                     $('nav').animate({
                         scrollLeft: offset,
                     }, 300)
                     return false;
-                } else if (offset < 0 && $(window).width < 768) {
+                } else if (offset < 0 && window.innerWidth < 768) {
                     $('nav').animate({
                         scrollLeft: 0,
                     }, 300)

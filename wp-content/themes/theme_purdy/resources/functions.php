@@ -165,5 +165,8 @@ pll_register_string('Reglamento', 'Reglamento', 'theme-purdy');
 pll_register_string('Términos y Condiciones', 'Términos y Condiciones', 'theme-purdy');
 pll_register_string('Derechos Reservados', 'Derechos Reservados', 'theme-purdy');
 
+pll_register_string('Anterior', 'Anterior', 'theme-purdy');
+pll_register_string('Siguiente', 'Siguiente', 'theme-purdy');
+
 
 
