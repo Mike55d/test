@@ -1,3 +1,5 @@
+import 'slick-carousel';
+
 export default {
     init() {
         // JavaScript to be fired on the home page
@@ -88,22 +90,6 @@ export default {
             $('.carousel').carousel('pause');
         });
 
-        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function() {
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            for (var i = 0; i < 1; i++) {
-                next = next.next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                next.children(':first-child').clone().appendTo($(this));
-            }
-        });
-
         $('.text-only').keydown(function(e) {
             if (e.shiftKey || e.ctrlKey || e.altKey) {
                 e.preventDefault();
@@ -143,8 +129,33 @@ export default {
                     }
                 }
             }, 100)
-        })
+        });
 
+        // if (window.innerWidth < 768) {
+        //     $('.slider-multi').slick({
+        //         dots: true,
+        //         arrows: false,
+        //         infinite: false,
+        //         centerMode: false,
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //     });
+        // }
+
+        $(window).on('resize load', function() {
+            if (window.innerWidth >= 768 && $('.slick-initialized').length) {
+                $('.slider-multi').slick('unslick')
+            } else if (window.innerWidth < 768 && !$('.slick-initialized').length) {
+                $('.slider-multi').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: false,
+                    centerMode: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                });
+            }
+        })
     },
     finalize() {
         // JavaScript to be fired on the home page, after the init JS

@@ -51,7 +51,6 @@ footer {
             flex-basis: 0;
             li {
                 padding: 0 10px;
-                font-size: 1em;
             }
         }
     }
@@ -69,6 +68,7 @@ footer {
         font-weight: bold;
         margin: 20px 0;
         text-align: center;
+        font-size: 0.8em;
         @include bp (md) {
             text-align: right;
         }

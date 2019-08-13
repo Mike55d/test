@@ -55,20 +55,9 @@
           </div>
         </div>
         <div class="social-slider">
-            <div id="carousel-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-              
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                  @foreach($social_axis_loop as $social_item)
-                    <li data-target="#carousel-multi" data-slide-to="{!! $loop->index !!}" @if ($loop->first)class="active" @endif></li>
-                  @endforeach
-              </ol>
-              <!--/.Indicators-->
-            
-              <div class="carousel-inner v-2" role="listbox">
+            <div class="slider-multi">
                 @foreach($social_axis_loop as $social_item)
-                <div class="carousel-item @if ($loop->first) active @endif">
-                  <div class="col-12 col-md-4">
+                <div class="slider-item">
                     <div class="card card-social mb-2">
                         {!! $social_item['thumbnail'] !!}
                         <h4 class="text-white my-3">{!! $social_item['title'] !!}</h4>
@@ -87,10 +76,8 @@
                           <span>@php _e("Ver más") @endphp</span> 
                           <i class="icn icn-1 icn-chevron"></i></a>
                       </div>
-                    </div>
                   </div>
                 @endforeach
-              </div>
             </div>
         </div>
       </div>

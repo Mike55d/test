@@ -50,20 +50,9 @@
           </div>
         </div>
         <div class="social-slider">
-            <div id="carousel-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
-              
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                  <?php $__currentLoopData = $social_axis_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $social_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <li data-target="#carousel-multi" data-slide-to="<?php echo $loop->index; ?>" <?php if($loop->first): ?>class="active" <?php endif; ?>></li>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-              </ol>
-              <!--/.Indicators-->
-            
-              <div class="carousel-inner v-2" role="listbox">
+            <div class="slider-multi">
                 <?php $__currentLoopData = $social_axis_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $social_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="carousel-item <?php if($loop->first): ?> active <?php endif; ?>">
-                  <div class="col-12 col-md-4">
+                <div class="slider-item">
                     <div class="card card-social mb-2">
                         <?php echo $social_item['thumbnail']; ?>
 
@@ -83,10 +72,8 @@
                           <span><?php _e("Ver más") ?></span> 
                           <i class="icn icn-1 icn-chevron"></i></a>
                       </div>
-                    </div>
                   </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-              </div>
             </div>
         </div>
       </div>
