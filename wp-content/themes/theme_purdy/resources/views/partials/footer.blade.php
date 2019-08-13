@@ -11,11 +11,11 @@
   <div class="footer-info">
         <a class="logo" href="#top">Grupo Purdy Motor</a>
         <ul class="footer-social-links">
-            <li><a target="_blank" href="{!! $footer_fields->privacy_policy !!}">Reglamento</a></li>
-            <li><a target="_blank" href="{!! $footer_fields->terms_and_conditions !!}">Términos y Condiciones</a></li>
+            <li><a target="_blank" href="{!! $footer_fields->privacy_policy !!}">@php _e('Reglamento') @endphp</a></li>
+            <li><a target="_blank" href="{!! $footer_fields->terms_and_conditions !!}">@php _e('Términos y Condiciones') @endphp</a></li>
             <li><a target="_blank" href="{!! $footer_fields->cookies !!}">Cookies</a></li>
         </ul>
-        <p class="copy">&copy; Purdy Motor 2019. Derechos Reservados.</p>
+        <p class="copy">&copy; Purdy Motor 2019. @php _e('Derechos Reservados') @endphp</p>
   </div>
 
 </footer>

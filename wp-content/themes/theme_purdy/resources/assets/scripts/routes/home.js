@@ -25,19 +25,8 @@ export default {
                         // $('.nav-item').removeClass('active');
                         // $(this).parent().addClass('active');
                         $('html, body').animate({
-                            scrollTop: target.offset().top - 200,
-                        }, 500, function() {
-                            // Callback after animation
-                            // Must change focus!
-                            var $target = $(target);
-                            $target.focus();
-                            if ($target.is(':focus')) { // Checking if the target was focused
-                                return false;
-                            } else {
-                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                                $target.focus(); // Set focus again
-                            }
-                        });
+                            scrollTop: target.offset().top - 100,
+                        }, 500);
                     }
                 }
             });
@@ -59,14 +48,13 @@ export default {
             clearTimeout($.data(this, 'scrollTimer'));
             $.data(this, 'scrollTimer', setTimeout(function() {
                 var offset = $('.nav-item.active').offset().left - $(window).scrollLeft();
-                console.log(offset);
-                if (offset > window.innerWidth) {
+                if (offset > window.innerWidth && $(window).width < 768) {
                     // Not in view so scroll to it
                     $('nav').animate({
                         scrollLeft: offset,
                     }, 300)
                     return false;
-                } else if (offset < 0) {
+                } else if (offset < 0 && $(window).width < 768) {
                     $('nav').animate({
                         scrollLeft: 0,
                     }, 300)

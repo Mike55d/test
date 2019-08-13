@@ -30,7 +30,7 @@
                     <h3>{!! $services_item['title'] !!}</h3>
                     <p>{!! $services_item['content'] !!}</p>
                     <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="{!! $loop->index !!}">
-                      @php echo(pll__("Ver más")) @endphp
+                      @php _e("Ver más") @endphp
                       <i class="icn icn-1 icn-chevron"></i></a>
                   </div>
               </div>
@@ -75,7 +75,7 @@
                         <p class="text-white">{!! strip_tags($social_item['content']) !!}</p>
                         <div class="collapse" id="social-collapse{!! $loop->index !!}">
                           <h5 class="text-white my-2">
-                              @php echo(pll__("Objetivos")) @endphp
+                              @php _e("Objetivos") @endphp
                           </h5>
                           <ul class="text-white p-0 mb-5">
                             @foreach ( $social_item['objectives'] as $o)
@@ -84,7 +84,7 @@
                           </ul>
                         </div>
                         <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white expand">
-                          <span>@php echo(pll__("Ver más")) @endphp</span> 
+                          <span>@php _e("Ver más") @endphp</span> 
                           <i class="icn icn-1 icn-chevron"></i></a>
                       </div>
                     </div>
@@ -134,15 +134,16 @@
                           <div class="card-body">
                             <ul class="location-list">
                               <li><i class="icn icn-1 icn-phone"></i><strong>
-                                @php echo(pll__("Contacto")) @endphp
+                                @php _e("Contacto") @endphp
                                 </strong><br>
-                                @php echo(pll__("Teléfono")) @endphp
+                                @php _e("Teléfono") @endphp
                                 {!! $location['phone'] !!}</li>
                               <li><i class="icn icn-1 icn-pin"></i><strong>
-                                  @php echo(pll__("Dirección")) @endphp  
-                                </strong> {!! $location['address'] !!}</li>
+                                  @php _e("Dirección") @endphp  
+                                </strong><br>
+                                {!! $location['address'] !!}</li>
                               <li><i class="icn icn-1 icn-clock"></i><strong>
-                                  @php echo(pll__("Horario de Atención")) @endphp
+                                  @php _e("Horario de Atención") @endphp
                                 </strong> 
                                 <ul>
                                   @foreach ($location['schedule'] as $sc)
@@ -151,7 +152,7 @@
                                 </ul>
                               </li>
                               <li><strong>
-                                @php echo(pll__("Ir con")) @endphp : 
+                                @php _e("Ir con") @endphp : 
                                 <br>
                                 <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
                                 <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
@@ -171,12 +172,12 @@
               <h3 class="text-red">05</h3>
               <h1 class="text-white">{!! $contact_fields->contact_title !!}</h1>
               <p class="text-white">{!! $contact_fields->contact_description !!}</p>
-              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php echo(pll__("Teléfono")) @endphp: {!! $contact_fields->contact_phone !!}</p>
+              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php _e("Teléfono") @endphp: {!! $contact_fields->contact_phone !!}</p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: {!! $contact_fields->contact_messenger !!}</p>
           </div>
           <div class="col-md-6">
               <h3 class="text-white">
-                @php echo(pll__("Envíanos un mensaje")) @endphp
+                @php _e("Envíanos un mensaje") @endphp
               </h3>
               @shortcode( $contact_fields->contact_form )
           </div>

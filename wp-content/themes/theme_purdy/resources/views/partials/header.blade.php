@@ -7,12 +7,12 @@
   </div>
   <nav>
       <ul class="nav-list">
-        <li class="nav-item active"><a href="#top">@php echo(pll__('Inicio')) @endphp</a></li>
-        <li class="nav-item"><a href="#services">@php echo(pll__('Servicios')) @endphp</a></li>
-        <li class="nav-item"><a href="#social">@php echo(pll__('Sostenibilidad')) @endphp</a></li>
-        <li class="nav-item"><a href="#people">@php echo(pll__('Gente Purdy')) @endphp</a></li>
-        <li class="nav-item"><a href="#locations">@php echo(pll__('Encontranos')) @endphp</a></li>
-        <li class="nav-item"><a href="#contact">@php echo(pll__('Contáctanos')) @endphp</a></li>
+        <li class="nav-item active"><a href="#top">@php _e('Inicio') @endphp</a></li>
+        <li class="nav-item"><a href="#services">@php _e('Servicios') @endphp</a></li>
+        <li class="nav-item"><a href="#social">@php _e('Sostenibilidad') @endphp</a></li>
+        <li class="nav-item"><a href="#people">@php _e('Gente Purdy') @endphp</a></li>
+        <li class="nav-item"><a href="#locations">@php _e('Encontranos') @endphp</a></li>
+        <li class="nav-item"><a href="#contact">@php _e('Contáctanos') @endphp</a></li>
       </ul>
   </nav>
   <ul class="language-switcher d-none d-md-block">

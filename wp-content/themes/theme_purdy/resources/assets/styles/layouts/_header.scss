@@ -17,7 +17,7 @@
         margin: 10px auto;
     }
     @include bp (md) {
-        padding: 20px 50px;
+        padding: 20px 100px;
         height: 90px;
         .logo {
             margin: 0;
@@ -105,6 +105,11 @@ nav {
 
 .language-switcher {
     padding: 0;
+    position: fixed;
+    right: 10px;
+    @include bp (md) {
+        position: static;
+    }
     a {
         text-transform: uppercase;
     }

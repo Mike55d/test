@@ -142,3 +142,28 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_sub_page('Footer');
 	
 }
+
+
+pll_register_string('Inicio', 'Inicio', 'theme-purdy');
+pll_register_string('Servicios', 'Servicios', 'theme-purdy');
+pll_register_string('Sostenibilidad', 'Sostenibilidad', 'theme-purdy');
+pll_register_string('Gente Purdy', 'Gente Purdy', 'theme-purdy');
+pll_register_string('Encontranos', 'Encontranos', 'theme-purdy');
+pll_register_string('Contáctanos', 'Contáctanos', 'theme-purdy');
+
+pll_register_string('Ver más', 'Ver más', 'theme-purdy');
+pll_register_string('Objetivos', 'Objetivos', 'theme-purdy');
+
+pll_register_string('Contacto', 'Contacto', 'theme-purdy');
+pll_register_string('Teléfono', 'Teléfono', 'theme-purdy');
+pll_register_string('Dirección', 'Dirección', 'theme-purdy');
+pll_register_string('Horario de Atención', 'Horario de Atención', 'theme-purdy');
+pll_register_string('Ir con', 'Ir con', 'theme-purdy');
+pll_register_string('Envíanos un mensaje', 'Envíanos un mensaje', 'theme-purdy');
+
+pll_register_string('Reglamento', 'Reglamento', 'theme-purdy');
+pll_register_string('Términos y Condiciones', 'Términos y Condiciones', 'theme-purdy');
+pll_register_string('Derechos Reservados', 'Derechos Reservados', 'theme-purdy');
+
+
+
