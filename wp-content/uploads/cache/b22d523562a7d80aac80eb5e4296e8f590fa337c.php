@@ -104,48 +104,49 @@
             <h1><?php echo $locations_fields->locations_title; ?></h1>
             <p><?php echo $locations_fields->locations_description; ?></p>
             
-            <div class="accordion row" id="accordion-locations">
+            <div class="accordion" id="accordion-locations">
                 <?php $__currentLoopData = $locations_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $location): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header" id="heading<?php echo $loop->index; ?>">
-                            <button class="button button-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapse<?php echo $loop->index; ?>" aria-expanded="true" aria-controls="collapse<?php echo $loop->index; ?>">
-                                <i class="icn icn-1 icn-plus"></i> <?php echo $location['title']; ?>
+                  <div class="card">
+                      <div class="card-header" id="heading<?php echo $loop->index; ?>">
+                          <button class="button button-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapse<?php echo $loop->index; ?>" aria-expanded="true" aria-controls="collapse<?php echo $loop->index; ?>">
+                              <i class="icn icn-1 icn-plus"></i> <?php echo $location['title']; ?>
 
-                            </button>
-                        </div>
-                        <div id="collapse<?php echo $loop->index; ?>" class="collapse" aria-labelledby="heading<?php echo $loop->index; ?>" data-parent="#accordion-locations">
-                          <div class="card-body">
-                            <ul class="location-list">
-                              <li><i class="icn icn-1 icn-phone"></i><strong>
-                                <?php _e("Contacto") ?>
-                                </strong><br>
-                                <?php _e("Teléfono") ?>
-                                <?php echo $location['phone']; ?></li>
-                              <li><i class="icn icn-1 icn-pin"></i><strong>
-                                  <?php _e("Dirección") ?>  
-                                </strong><br>
-                                <?php echo $location['address']; ?></li>
-                              <li><i class="icn icn-1 icn-clock"></i><strong>
-                                  <?php _e("Horario de Atención") ?>
-                                </strong> 
-                                <ul>
-                                  <?php $__currentLoopData = $location['schedule']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li><?php echo $sc['days']; ?>: <?php echo $sc['hours']; ?></li>
-                                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </ul>
-                              </li>
-                              <li><strong>
-                                <?php _e("Ir con") ?> : 
-                                <br>
-                                <a class="text-red" href="<?php echo $location['waze_link']; ?>" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
-                                <a class="text-red" href="<?php echo $location['google_maps_link']; ?>" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
-                              </li>
-                            </ul>
-                          </div>
+                          </button>
+                      </div>
+                      <div id="collapse<?php echo $loop->index; ?>" class="collapse" aria-labelledby="heading<?php echo $loop->index; ?>" data-parent="#accordion-locations">
+                        <div class="card-body">
+                          <ul class="location-list">
+                            <li><i class="icn icn-1 icn-phone"></i><strong>
+                              <?php _e("Contacto") ?>
+                              </strong><br>
+                              <?php _e("Teléfono") ?>
+                              <?php echo $location['phone']; ?></li>
+                            <li><i class="icn icn-1 icn-pin"></i><strong>
+                                <?php _e("Dirección") ?>  
+                              </strong><br>
+                              <?php echo $location['address']; ?></li>
+                            <li><i class="icn icn-1 icn-clock"></i><strong>
+                                <?php _e("Horario de Atención") ?>
+                              </strong> 
+                              <ul>
+                                <?php $__currentLoopData = $location['schedule']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sc): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                  <li><?php echo $sc['days']; ?>: <?php echo $sc['hours']; ?></li>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                              </ul>
+                            </li>
+                            <li><strong>
+                              <?php _e("Ir con") ?> : 
+                              <br>
+                              <a class="text-red" href="<?php echo $location['waze_link']; ?>" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
+                              <a class="text-red" href="<?php echo $location['google_maps_link']; ?>" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                </div>
+                    </div>
+                    <?php if($loop->iteration == round($loop->count / 2)): ?>
+                      <div class="break-column"></div>
+                    <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </div>
         </div>

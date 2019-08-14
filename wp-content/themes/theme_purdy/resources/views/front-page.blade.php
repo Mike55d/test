@@ -108,47 +108,48 @@
             <h1>{!! $locations_fields->locations_title !!}</h1>
             <p>{!! $locations_fields->locations_description !!}</p>
             
-            <div class="accordion row" id="accordion-locations">
+            <div class="accordion" id="accordion-locations">
                 @foreach($locations_loop as $location)
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header" id="heading{!! $loop->index !!}">
-                            <button class="button button-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapse{!! $loop->index !!}" aria-expanded="true" aria-controls="collapse{!! $loop->index !!}">
-                                <i class="icn icn-1 icn-plus"></i> {!! $location['title'] !!}
-                            </button>
-                        </div>
-                        <div id="collapse{!! $loop->index !!}" class="collapse" aria-labelledby="heading{!! $loop->index !!}" data-parent="#accordion-locations">
-                          <div class="card-body">
-                            <ul class="location-list">
-                              <li><i class="icn icn-1 icn-phone"></i><strong>
-                                @php _e("Contacto") @endphp
-                                </strong><br>
-                                @php _e("Teléfono") @endphp
-                                {!! $location['phone'] !!}</li>
-                              <li><i class="icn icn-1 icn-pin"></i><strong>
-                                  @php _e("Dirección") @endphp  
-                                </strong><br>
-                                {!! $location['address'] !!}</li>
-                              <li><i class="icn icn-1 icn-clock"></i><strong>
-                                  @php _e("Horario de Atención") @endphp
-                                </strong> 
-                                <ul>
-                                  @foreach ($location['schedule'] as $sc)
-                                    <li>{!!$sc['days']!!}: {!! $sc['hours'] !!}</li>
-                                  @endforeach
-                                </ul>
-                              </li>
-                              <li><strong>
-                                @php _e("Ir con") @endphp : 
-                                <br>
-                                <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
-                                <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
-                              </li>
-                            </ul>
-                          </div>
+                  <div class="card">
+                      <div class="card-header" id="heading{!! $loop->index !!}">
+                          <button class="button button-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapse{!! $loop->index !!}" aria-expanded="true" aria-controls="collapse{!! $loop->index !!}">
+                              <i class="icn icn-1 icn-plus"></i> {!! $location['title'] !!}
+                          </button>
+                      </div>
+                      <div id="collapse{!! $loop->index !!}" class="collapse" aria-labelledby="heading{!! $loop->index !!}" data-parent="#accordion-locations">
+                        <div class="card-body">
+                          <ul class="location-list">
+                            <li><i class="icn icn-1 icn-phone"></i><strong>
+                              @php _e("Contacto") @endphp
+                              </strong><br>
+                              @php _e("Teléfono") @endphp
+                              {!! $location['phone'] !!}</li>
+                            <li><i class="icn icn-1 icn-pin"></i><strong>
+                                @php _e("Dirección") @endphp  
+                              </strong><br>
+                              {!! $location['address'] !!}</li>
+                            <li><i class="icn icn-1 icn-clock"></i><strong>
+                                @php _e("Horario de Atención") @endphp
+                              </strong> 
+                              <ul>
+                                @foreach ($location['schedule'] as $sc)
+                                  <li>{!!$sc['days']!!}: {!! $sc['hours'] !!}</li>
+                                @endforeach
+                              </ul>
+                            </li>
+                            <li><strong>
+                              @php _e("Ir con") @endphp : 
+                              <br>
+                              <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
+                              <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                </div>
+                    </div>
+                    @if ($loop->iteration == round($loop->count / 2))
+                      <div class="break-column"></div>
+                    @endif
                 @endforeach
               </div>
         </div>

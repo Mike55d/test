@@ -1,8 +1,23 @@
 /* stylelint-disable */
 
 .accordion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+    @include bp(sm) {
+        height: 300px;
+    }
+    .break-column {
+        flex-basis: 100%;
+    }
     .card {
-        width: 100%
+        margin: 10px;
+        width: 100%;
+        @include bp(sm) {
+            width: calc(50% - 20px);
+        }
     }
     .card-header {
         padding: 0;
