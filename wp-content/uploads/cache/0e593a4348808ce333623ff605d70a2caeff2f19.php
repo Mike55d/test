@@ -12,6 +12,8 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
+  <meta name="keywords" content="innovación tecnológica, venta de vehículos usados en costa rica, venta de vehículos usados, compra y venta de vehículos usados, venta de vehículos costa rica, venta de autos usados en costa rica, venta de autos, venta de autos usados, venta de autos costa rica, sostenibilidad, sostenibilidad ambiental, sostenibilidad ambiental y social, centro de servicio automotriz, servicio post venta">
+
   
   <?php wp_head() ?>
 </head>
