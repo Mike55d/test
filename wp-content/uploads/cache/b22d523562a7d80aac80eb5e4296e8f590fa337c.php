@@ -144,9 +144,6 @@
                         </div>
                       </div>
                     </div>
-                    <?php if($loop->iteration == round($loop->count / 2)): ?>
-                      <div class="break-column"></div>
-                    <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </div>
         </div>

@@ -147,9 +147,6 @@
                         </div>
                       </div>
                     </div>
-                    @if ($loop->iteration == round($loop->count / 2))
-                      <div class="break-column"></div>
-                    @endif
                 @endforeach
               </div>
         </div>
