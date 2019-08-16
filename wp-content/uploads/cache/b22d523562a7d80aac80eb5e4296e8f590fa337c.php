@@ -24,7 +24,7 @@
                   <div class="card-content">
                     <h3><?php echo $services_item['title']; ?></h3>
                     <p><?php echo $services_item['content']; ?></p>
-                    <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="<?php echo $loop->index; ?>">
+                    <a href="#" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="<?php echo $loop->index; ?>">
                       <?php _e("Ver más") ?>
                       <i class="icn icn-1 icn-chevron"></i></a>
                   </div>
@@ -171,34 +171,32 @@
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-1 icn-plus" aria-hidden="true"></i></button>
-              <div id="services-carousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                      <?php $__currentLoopData = $services_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $services_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                      <div class="carousel-item <?php if($loop->first): ?> active <?php endif; ?>">
-                        <div class="modal-header">
-                            <div class="f-center-left">
-                              <img src="<?php echo $services_item['icon']; ?>" aria-hidden="true" class="m-1">
-                              <h2 class="text-white m-2"><?php echo $services_item['title']; ?></h2>
-                            </div>
-                            <p class="text-white"><?php echo strip_tags($services_item['content']); ?></p>
+              <div id="services-carousel" class="slider-services">
+                  <?php $__currentLoopData = $services_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $services_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="slide">
+                      <div class="modal-header">
+                          <div class="f-center-left">
+                            <img src="<?php echo $services_item['icon']; ?>" aria-hidden="true" class="m-1">
+                            <h2 class="text-white m-2"><?php echo $services_item['title']; ?></h2>
                           </div>
-                          <div class="modal-body">
-                            <h4 class="text-red"><?php echo $services_item['stat_number']; ?></h4>
-                            <h4 class="text-white"><?php echo $services_item['stat_title']; ?></h4>
-                            <p class="text-white"><?php echo $services_item['stat_description']; ?></p>
-                          </div>
-                      </div>
+                          <p class="text-white"><?php echo strip_tags($services_item['content']); ?></p>
+                        </div>
+                        <div class="modal-body">
+                          <h4 class="text-red"><?php echo $services_item['stat_number']; ?></h4>
+                          <h4 class="text-white"><?php echo $services_item['stat_title']; ?></h4>
+                          <p class="text-white"><?php echo $services_item['stat_description']; ?></p>
+                        </div>
+                    </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                  </div>
-                  <a class="carousel-control-prev" href="#services-carousel" role="button" data-slide="prev">
-                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span> <?php echo e(_e('Anterior')); ?>
-
-                  </a>
-                  <a class="carousel-control-next" href="#services-carousel" role="button" data-slide="next">
-                      <?php echo e(_e('Siguiente')); ?> <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
-                  </a>
+                  
                 </div>
-              
+                <a class="prev" href="#" role="button" data-slide="prev">
+                    <i class="icn icn-1 icn-chevron" aria-hidden="true"></i> <?php echo e(_e('Anterior')); ?>
+
+                </a>
+                <a class="next" href="#" role="button" data-slide="next">
+                    <?php echo e(_e('Siguiente')); ?> <i class="icn icn-1 icn-chevron" aria-hidden="true"></i>
+                </a>
           </div>
         </div>
   </div>

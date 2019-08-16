@@ -1,25 +1,42 @@
 /* stylelint-disable */
 
-.carousel-control-prev,
-.carousel-control-next {
+.prev,
+.next {
+    position: absolute;
+    display: flex!important;
     opacity: 1;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     justify-content: flex-end;
     top: auto;
     height: 30px;
     width: 20%;
-    span {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
+    bottom: 20px;
+    color: $white;
+    align-items: center;
+    right: 10px;
+    i {
+        transition: all 0.2s ease;
+        margin: 0 10px;
+    }
+    &:hover {
+        color: $white;
+        i {
+            transform: translateX(10px);
+        }
     }
 }
 
-.carousel-control-prev {
+.prev {
     justify-content: flex-start;
-    span {
+    left: 10px;
+    i {
         transform: rotate(180deg);
+    }
+    &:hover {
+        i {
+            transform: translateX(-10px) rotate(180deg);
+        }
     }
 }
 

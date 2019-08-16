@@ -29,7 +29,7 @@
                   <div class="card-content">
                     <h3>{!! $services_item['title'] !!}</h3>
                     <p>{!! $services_item['content'] !!}</p>
-                    <a href="#ServicesModal" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="{!! $loop->index !!}">
+                    <a href="#" data-toggle="modal" data-target="#ServicesModal" class="button button-arrow idx" data-index="{!! $loop->index !!}">
                       @php _e("Ver más") @endphp
                       <i class="icn icn-1 icn-chevron"></i></a>
                   </div>
@@ -174,33 +174,31 @@
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn icn-1 icn-plus" aria-hidden="true"></i></button>
-              <div id="services-carousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                      @foreach($services_loop as $services_item)
-                      <div class="carousel-item @if ($loop->first) active @endif">
-                        <div class="modal-header">
-                            <div class="f-center-left">
-                              <img src="{!! $services_item['icon'] !!}" aria-hidden="true" class="m-1">
-                              <h2 class="text-white m-2">{!! $services_item['title'] !!}</h2>
-                            </div>
-                            <p class="text-white">{!! strip_tags($services_item['content']) !!}</p>
+              <div id="services-carousel" class="slider-services">
+                  @foreach($services_loop as $services_item)
+                    <div class="slide">
+                      <div class="modal-header">
+                          <div class="f-center-left">
+                            <img src="{!! $services_item['icon'] !!}" aria-hidden="true" class="m-1">
+                            <h2 class="text-white m-2">{!! $services_item['title'] !!}</h2>
                           </div>
-                          <div class="modal-body">
-                            <h4 class="text-red">{!! $services_item['stat_number'] !!}</h4>
-                            <h4 class="text-white">{!! $services_item['stat_title'] !!}</h4>
-                            <p class="text-white">{!! $services_item['stat_description'] !!}</p>
-                          </div>
-                      </div>
+                          <p class="text-white">{!! strip_tags($services_item['content']) !!}</p>
+                        </div>
+                        <div class="modal-body">
+                          <h4 class="text-red">{!! $services_item['stat_number'] !!}</h4>
+                          <h4 class="text-white">{!! $services_item['stat_title'] !!}</h4>
+                          <p class="text-white">{!! $services_item['stat_description'] !!}</p>
+                        </div>
+                    </div>
                     @endforeach
-                  </div>
-                  <a class="carousel-control-prev" href="#services-carousel" role="button" data-slide="prev">
-                    <span class="icn icn-1 icn-chevron" aria-hidden="true"></span> {{ _e('Anterior') }}
-                  </a>
-                  <a class="carousel-control-next" href="#services-carousel" role="button" data-slide="next">
-                      {{ _e('Siguiente') }} <span class="icn icn-1 icn-chevron" aria-hidden="true"></span>
-                  </a>
+                  
                 </div>
-              
+                <a class="prev" href="#" role="button" data-slide="prev">
+                    <i class="icn icn-1 icn-chevron" aria-hidden="true"></i> {{ _e('Anterior') }}
+                </a>
+                <a class="next" href="#" role="button" data-slide="next">
+                    {{ _e('Siguiente') }} <i class="icn icn-1 icn-chevron" aria-hidden="true"></i>
+                </a>
           </div>
         </div>
   </div>
