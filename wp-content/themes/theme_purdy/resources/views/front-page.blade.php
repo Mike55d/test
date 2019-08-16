@@ -66,7 +66,7 @@
                           <h5 class="text-white my-2">
                               @php _e("Objetivos") @endphp
                           </h5>
-                          <ul class="text-white p-0 mb-5">
+                          <ul class="text-white mb-5 list-goals">
                             @foreach ( $social_item['objectives'] as $o)
                               <li>{!! $o['objective'] !!}</li>
                             @endforeach
@@ -157,8 +157,8 @@
               <h3 class="text-red">05</h3>
               <h1 class="text-white">{!! $contact_fields->contact_title !!}</h1>
               <p class="text-white">{!! $contact_fields->contact_description !!}</p>
-              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php _e("Teléfono") @endphp: {!! $contact_fields->contact_phone !!}</p>
-              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: {!! $contact_fields->contact_messenger !!}</p>
+              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php _e("Teléfono") @endphp: <a class="text-white" href="tel:{!! $contact_fields->contact_phone !!}">{!! $contact_fields->contact_phone !!}</a></p>
+              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="{!! $contact_fields->contact_messenger !!}">{!! $contact_fields->contact_messenger !!}</a></p>
           </div>
           <div class="col-md-6">
               <h3 class="text-white">

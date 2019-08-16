@@ -62,7 +62,7 @@
                           <h5 class="text-white my-2">
                               <?php _e("Objetivos") ?>
                           </h5>
-                          <ul class="text-white p-0 mb-5">
+                          <ul class="text-white mb-5 list-goals">
                             <?php $__currentLoopData = $social_item['objectives']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                               <li><?php echo $o['objective']; ?></li>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -154,8 +154,8 @@
               <h3 class="text-red">05</h3>
               <h1 class="text-white"><?php echo $contact_fields->contact_title; ?></h1>
               <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
-              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php _e("Teléfono") ?>: <?php echo $contact_fields->contact_phone; ?></p>
-              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <?php echo $contact_fields->contact_messenger; ?></p>
+              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php _e("Teléfono") ?>: <a class="text-white" href="tel:<?php echo $contact_fields->contact_phone; ?>"><?php echo $contact_fields->contact_phone; ?></a></p>
+              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="<?php echo $contact_fields->contact_messenger; ?>"><?php echo $contact_fields->contact_messenger; ?></a></p>
           </div>
           <div class="col-md-6">
               <h3 class="text-white">

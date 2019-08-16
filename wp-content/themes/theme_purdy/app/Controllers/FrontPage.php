@@ -53,7 +53,7 @@ class FrontPage extends Controller
     {
         $locations_items = get_posts([
             'post_type' => 'locations',
-            'posts_per_page'=>'10',
+            'posts_per_page'=>'20',
         ]);
 
         return array_map(function ($post) {
