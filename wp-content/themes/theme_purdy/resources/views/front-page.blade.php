@@ -59,7 +59,9 @@
                 @foreach($social_axis_loop as $social_item)
                 <div class="slider-item">
                     <div class="card card-social mb-2">
-                        {!! $social_item['thumbnail'] !!}
+                        <div class="card-thumbnail">
+                            {!! $social_item['thumbnail'] !!}
+                        </div>
                         <h4 class="text-white my-3">{!! $social_item['title'] !!}</h4>
                         <p class="text-white">{!! strip_tags($social_item['content']) !!}</p>
                         <div class="collapse" id="social-collapse{!! $loop->index !!}">

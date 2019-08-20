@@ -54,8 +54,10 @@
                 <?php $__currentLoopData = $social_axis_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $social_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="slider-item">
                     <div class="card card-social mb-2">
-                        <?php echo $social_item['thumbnail']; ?>
+                        <div class="card-thumbnail">
+                            <?php echo $social_item['thumbnail']; ?>
 
+                        </div>
                         <h4 class="text-white my-3"><?php echo $social_item['title']; ?></h4>
                         <p class="text-white"><?php echo strip_tags($social_item['content']); ?></p>
                         <div class="collapse" id="social-collapse<?php echo $loop->index; ?>">
