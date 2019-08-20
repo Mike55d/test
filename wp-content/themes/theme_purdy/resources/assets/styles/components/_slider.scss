@@ -41,7 +41,6 @@
 }
 
 .social-slider {
-    overflow: hidden;
     width: 100%;
 }
 
@@ -53,6 +52,7 @@
         justify-content: space-around;
         .slider-item {
             margin: 10px;
+            width: 30%;
         }
     }
     .slick-slide {
