@@ -168,5 +168,7 @@ pll_register_string('Derechos Reservados', 'Derechos Reservados', 'theme-purdy')
 pll_register_string('Anterior', 'Anterior', 'theme-purdy');
 pll_register_string('Siguiente', 'Siguiente', 'theme-purdy');
 
+pll_register_string('Keywords', 'Keywords', 'theme-purdy');
+
 
 

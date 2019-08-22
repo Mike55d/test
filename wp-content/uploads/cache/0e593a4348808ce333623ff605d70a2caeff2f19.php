@@ -12,8 +12,15 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
-  <meta name="keywords" content="innovación tecnológica, venta de vehículos usados en costa rica, venta de vehículos usados, compra y venta de vehículos usados, venta de vehículos costa rica, venta de autos usados en costa rica, venta de autos, venta de autos usados, venta de autos costa rica, sostenibilidad, sostenibilidad ambiental, sostenibilidad ambiental y social, centro de servicio automotriz, servicio post venta">
+  <meta name="keywords" content="<?php _e("Keywords") ?>">
 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NCJDSW6');</script>
+      <!-- End Google Tag Manager -->
   
   <?php wp_head() ?>
 </head>
