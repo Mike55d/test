@@ -43,7 +43,7 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - name: disk1-pvc-nfs
-              mountPath: "/mnt/disk1"
+              mountPath: "/mnt"
               subPath: shared-storage/grupopurdy-landing
           #          resources:
           #            requests:
