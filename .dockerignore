@@ -17,6 +17,5 @@ app/logs/*
 app/sessions
 web/uploads
 wp-content/uploads
-wp-content/themes/theme_purdy/dist
 wp-content/themes/theme_purdy/node_modules
 wp-content/themes/theme_purdy/vendor
