@@ -18,13 +18,13 @@ RUN chmod +x /usr/local/bin/start-httpd
 
 COPY . /opt/app
 
-WORKDIR /opt/app
-
 WORKDIR /opt/app/wp-content/themes/theme_purdy
 
 RUN composer install
 
 WORKDIR /opt/app
+
+RUN rm -rf /var/www/localhost/htdocs && ln -s /opt/app /var/www/localhost/htdocs
 
 RUN apk del git
 RUN rm -rf kubernetes
