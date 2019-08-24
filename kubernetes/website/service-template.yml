@@ -1,0 +1,61 @@
+# It is a service type LoadBalancer to expose the port on public network
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: websites
+  name: grupopurdy-landing
+  labels:
+    app: grupopurdy-landing
+    name: grupopurdy-landing
+spec:
+  ports:
+    - port: 80
+      name: gprdylding-http
+  clusterIP: None
+  selector:
+    name: grupopurdy-landing
+
+---
+
+# A Deployment controller provides declarative updates for Pods and ReplicaSets.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: websites
+  name: grupopurdy-landing
+  labels:
+    name: grupopurdy-landing
+spec:
+  selector:
+    matchLabels:
+      name: grupopurdy-landing
+  template:
+    metadata:
+      namespace: websites
+      labels:
+        name: grupopurdy-landing
+    spec:
+      imagePullSecrets:
+        - name: toyotacr-container-registry
+      containers:
+        - image: container-registry.grupopurdy.org:4567/toyotacr/grupopurdy-landing:${IMAGE_TAG}
+          name: grupopurdy-landing
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: disk1-pvc-nfs
+              mountPath: "/mnt/disk1"
+              subPath: shared-storage/grupopurdy-landing
+          #          resources:
+          #            requests:
+          #              memory: "2000Mi"
+          #              cpu: "500m"
+          #            limits:
+          #             memory: "2000Mi"
+          #             cpu: "500m"
+          ports:
+            - containerPort: 80
+              name: prdylding-http
+      volumes:
+        - name: disk1-pvc-nfs
+          persistentVolumeClaim:
+            claimName: nfs-disk1-pvc

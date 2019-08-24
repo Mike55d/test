@@ -28,6 +28,7 @@ node_modules/
 .*
 
 # But not these files...
+!.dockerignore
 !.eslintrc.js
 !.stylelintrc.js
 
