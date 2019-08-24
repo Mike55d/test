@@ -71,9 +71,7 @@ print_style "Creating Build Image ${BUILD}:${TAG}.\n" "info"
 
 docker build -t base --compress -f base/Dockerfile ../
 #docker build -t ${BUILD} --squash --compress -f Dockerfile .
-docker build -t ${BUILD} --build-arg BUILD_ENV=${BUILD_ENV} --squash --compress -f Dockerfile ../../
-
-exit 0
+docker build -t ${BUILD} --build-arg BUILD_ENV=${BUILD_ENV} --compress -f Dockerfile ../../
 
 echo "\n"
 print_style "Creating Tag: ${TAG}.\n" "info"
