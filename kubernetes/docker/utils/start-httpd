@@ -41,5 +41,5 @@ cd /opt && chown -R apache:apache ./app &
 #    php app/console lumen:process:reporting --report 2 >> app/logs/cron.log
 #else
 #  # Start the services
-php-fpm5 -D && httpd -D FOREGROUND
+php-fpm7 -D && httpd -D FOREGROUND
 #fi
