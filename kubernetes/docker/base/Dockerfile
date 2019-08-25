@@ -2,11 +2,6 @@ FROM alpine:3.9
 
 MAINTAINER Leonardo Monge García <leonardo.monge@creativedrive.com>
 
-#Env Vars
-
-ARG BUILD_ENV
-ENV BUILD_ENV=$BUILD_ENV
-
 # Install misc dependencies
 
 RUN apk add
@@ -33,7 +28,7 @@ RUN apk --update --no-cache add \
         php7-opcache \
         php7-openssl \
         php7-pdo \
-        php7-pdo_mysql \
+        php7-mysqli \
         php7-pdo_pgsql \
         php7-pdo_sqlite \
         php7-phar \

@@ -20,15 +20,18 @@ COPY . /opt/app
 
 WORKDIR /opt/app/wp-content/themes/theme_purdy
 
-RUN composer install
+#RUN composer install
 
 WORKDIR /opt/app
 
 RUN rm -rf /var/www/localhost/htdocs && ln -s /opt/app /var/www/localhost/htdocs
 
-RUN apk del git
-RUN rm -rf kubernetes
-RUN rm -rf /var/cache/apk/*
+# Addind the wp-config
+RUN cp "wp-config.${BUILD_ENV}.php" config_template &&\
+    rm wp-config.* &&\
+    cp config_template wp-config.php
+
+RUN apk del git &&  rm -rf kubernetes && rm -rf /var/cache/apk/*
 
 EXPOSE 80 443 9000
 

@@ -48,7 +48,7 @@ if [[ $3 == "" ]] ; then
 fi
 
 if [[ $4 == "" ]] ; then
-    print_style "Missing arguments Environment available qa | prod.\n" "danger"
+    print_style "Missing arguments Environment available dev | prod.\n" "danger"
 
     exit 1
 fi
