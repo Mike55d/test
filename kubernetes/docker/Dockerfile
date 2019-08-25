@@ -34,7 +34,7 @@ RUN cp "wp-config.${BUILD_ENV}.php" config_template &&\
 
 # Setup htaccess
 
-RUN rm .htaccess && cp ".htaccess.${BUILD_ENV}" .htaccess
+RUN cp ".htaccess.${BUILD_ENV}" .htaccess
 
 RUN apk del git &&  rm -rf kubernetes && rm -rf /var/cache/apk/*
 

@@ -33,7 +33,7 @@ $SITE_URL = 'https://dev-purdy-landing.devdoubledigit.com';
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
     $_SERVER['HTTPS'] = 'on';
 
-if (isset($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+if (isset($_SERVER['HTTP_X_FORWARDED_HOST']))
     $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
 
 
