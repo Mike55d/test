@@ -33,6 +33,7 @@ ln -s /mnt/uploads /opt/app/wp-content/uploads
 
 # Fix permissions
 cd /opt && chown -R apache:apache ./app &
+cd /opt && chown -R apache:apache ./sessions &
 
 # Check if need to execute the cron job only or start the service
 #if [[  ! -z "$IS_CRON_JOB" && "$IS_CRON_JOB" == "CINDE_CRON_JOB" ]]; then
