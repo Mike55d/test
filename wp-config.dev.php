@@ -30,6 +30,12 @@ define( 'WP_MAX_MEMORY_LIMIT', '10M' );
 
 $SITE_URL = 'https://dev-purdy-landing.devdoubledigit.com';
 
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+    $_SERVER['HTTPS'] = 'on';
+
+if (isset($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+    $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
+
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
