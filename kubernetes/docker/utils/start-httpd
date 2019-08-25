@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Enable commonly used apache modules
+#sed -i 's/#LoadModule\ rewrite_module/LoadModule\ rewrite_module/' /etc/apache2/httpd.conf
+#sed -i 's/#LoadModule\ deflate_module/LoadModule\ deflate_module/' /etc/apache2/httpd.conf
+#sed -i 's/#LoadModule\ expires_module/LoadModule\ expires_module/' /etc/apache2/httpd.conf
+#sed -i 's/index.php/app.php index.php/g' /etc/apache2/conf.d/php5-module.conf
+
+
+if [ "$APP_ENV" != "prod" ]; then
+# Add the robots to avoid indexing the QA environment
+cd /opt/app
+cat > robots.txt <<- EOM
+User-agent: *
+Disallow: /
+EOM
+fi
+
+# Remove shared folders
+if [ -d "/opt/sessions" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  rm -rf /opt/sessions
+fi
+
+if [ -d "/opt/app/wp-content/uploads" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  rm -rf /opt/app/wp-content/uploads
+fi
+
+# Create symbolic links to the shared storage
+ln -s /mnt/sessions /opt/session
+ln -s /mnt/uploads /opt/app/wp-content/uploads
+
+# Fix permissions
+cd /opt && chown -R apache:apache ./app &
+
+# Check if need to execute the cron job only or start the service
+#if [[  ! -z "$IS_CRON_JOB" && "$IS_CRON_JOB" == "CINDE_CRON_JOB" ]]; then
+#    cd /opt/app
+#    php app/console lumen:process:reporting >> app/logs/cron.log
+#    php app/console lumen:process:reporting --report 2 >> app/logs/cron.log
+#else
+#  # Start the services
+php-fpm7 -D && httpd -D FOREGROUND
+#fi

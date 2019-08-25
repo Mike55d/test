@@ -28,6 +28,9 @@ node_modules/
 .*
 
 # But not these files...
+!.htaccess.prod
+!.htaccess.dev
+!.dockerignore
 !.eslintrc.js
 !.stylelintrc.js
 
