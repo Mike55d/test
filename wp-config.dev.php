@@ -39,7 +39,7 @@ define('DB_NAME', 'db_grupopurdy_landing');
 define('DB_USER', 'usr_grupopurdy_landing');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'ERczYB8m!u8auGt5EbwhzBEzIv@xCzHH');
 
 /** MySQL hostname */
 define('DB_HOST', 'mysql');
