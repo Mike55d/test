@@ -20,16 +20,21 @@ COPY . /opt/app
 
 WORKDIR /opt/app/wp-content/themes/theme_purdy
 
-#RUN composer install
+RUN composer install
 
 WORKDIR /opt/app
 
 RUN rm -rf /var/www/localhost/htdocs && ln -s /opt/app /var/www/localhost/htdocs
 
 # Addind the wp-config
+
 RUN cp "wp-config.${BUILD_ENV}.php" config_template &&\
     rm wp-config.* &&\
     cp config_template wp-config.php
+
+# Setup htaccess
+
+RUN rm .htaccess && cp ".htaccess.${BUILD_ENV}" .htaccess
 
 RUN apk del git &&  rm -rf kubernetes && rm -rf /var/cache/apk/*
 
