@@ -28,7 +28,7 @@ define('WP_MEMORY_LIMIT', '10M');
 define( 'WP_MAX_MEMORY_LIMIT', '10M' );
 
 
-$SITE_URL = 'https://dev-purdy-landing.devdoubledigit.com';
+$SITE_URL = 'https://dev.grupopurdy.org';
 
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
     $_SERVER['HTTPS'] = 'on';
@@ -104,6 +104,9 @@ define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true );
 define('WP_DEBUG_LOG_DISPLAY', true );
 define('SAVEQUERIES', true );
+
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'Toyota20174' );
 
 /* That's all, stop editing! Happy blogging. */
 
