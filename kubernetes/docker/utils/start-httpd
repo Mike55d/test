@@ -28,7 +28,7 @@ if [ -d "/opt/app/wp-content/uploads" ]; then
 fi
 
 # Create symbolic links to the shared storage
-ln -s /mnt/sessions /opt/session
+ln -s /mnt/sessions /opt/sessions
 ln -s /mnt/uploads /opt/app/wp-content/uploads
 
 # Fix permissions
