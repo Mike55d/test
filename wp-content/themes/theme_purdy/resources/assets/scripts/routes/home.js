@@ -91,11 +91,11 @@ export default {
         });
 
         $('.text-only').keydown(function(e) {
-            if (e.shiftKey || e.ctrlKey || e.altKey) {
+            if (e.ctrlKey || e.altKey) {
                 e.preventDefault();
             } else {
                 var key = e.keyCode;
-                if (!((key == 8) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
+                if (!((key == 8) || (key == 9) || (key == 32) || (key == 46) || (key >= 35 && key <= 40) || (key >= 65 && key <= 90))) {
                     e.preventDefault();
                 }
             }
@@ -106,7 +106,7 @@ export default {
                 e.preventDefault();
             } else {
                 var key = e.keyCode;
-                if (!((key >= 48 && key <= 57) || (key >= 96 && key <= 105) || (key == 8))) {
+                if (!((key >= 48 && key <= 57) || (key >= 96 && key <= 105) || (key == 8) || (key == 9))) {
                     e.preventDefault();
                 }
             }

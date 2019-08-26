@@ -12,6 +12,8 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
   <meta name="keywords" content="@php _e("Keywords") @endphp">
 
   <!-- Google Tag Manager -->

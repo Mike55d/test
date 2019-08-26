@@ -105,6 +105,9 @@ define('WP_DEBUG_LOG', true );
 define('WP_DEBUG_LOG_DISPLAY', true );
 define('SAVEQUERIES', true );
 
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'Toyota20174' );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
