@@ -28,7 +28,7 @@ define('WP_MEMORY_LIMIT', '10M');
 define( 'WP_MAX_MEMORY_LIMIT', '10M' );
 
 
-$SITE_URL = 'https://uat-purdy-landing.devdoubledigit.com';
+$SITE_URL = 'https://www.grupopurdy.org';
 
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
     $_SERVER['HTTPS'] = 'on';
