@@ -17,8 +17,7 @@
     </section>
     <section id="services">
       <div class="container">
-        <h3 class="text-red">01</h3>
-        <h1>{!! $services_fields->services_title !!}</h1>
+        <h1><span class="text-red">01</span> {!! $services_fields->services_title !!}</h1>
         <p>{!! $services_fields->services_description !!}</p>
         <div class="card-container my-3"> 
             @foreach($services_loop as $services_item)
@@ -43,8 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-              <h3 class="text-red">02</h3>
-              <h1 class="text-white">{!! $social_fields->social_title !!}</h1>
+              <h1 class="text-white"><span class="text-red">02</span> {!! $social_fields->social_title !!}</h1>
               <p class="text-white">{!! $social_fields->social_description !!}</p>
           </div>
           <div class="col-md-6">
@@ -86,8 +84,7 @@
     </section>
     <section id="people">
         <div class="container">
-          <h3 class="text-red">03</h3>
-          <h1>{!! $people_fields->people_title !!}</h1>
+          <h1><span class="text-red">03</span> {!! $people_fields->people_title !!}</h1>
         
         <div class="row">
           <div class="col-md-6">
@@ -106,8 +103,7 @@
     </section>   
     <section id="locations">
         <div class="container">
-            <h3 class="text-red">04</h3>
-            <h1>{!! $locations_fields->locations_title !!}</h1>
+            <h1><span class="text-red">04</span> {!! $locations_fields->locations_title !!}</h1>
             <p>{!! $locations_fields->locations_description !!}</p>
             
             <div class="accordion" id="accordion-locations">
@@ -156,8 +152,7 @@
     <section id="contact" class="bg-blue py-5 container">
         <div class="row">
           <div class="col-md-6">
-              <h3 class="text-red">05</h3>
-              <h1 class="text-white">{!! $contact_fields->contact_title !!}</h1>
+              <h1 class="text-white"><span class="text-red">05</span> {!! $contact_fields->contact_title !!}</h1>
               <p class="text-white">{!! $contact_fields->contact_description !!}</p>
               <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php _e("Teléfono") @endphp: <a class="text-white" href="tel:{!! $contact_fields->contact_phone !!}">{!! $contact_fields->contact_phone !!}</a></p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="{!! $contact_fields->contact_messenger !!}">{!! $contact_fields->contact_messenger !!}</a></p>
@@ -187,8 +182,7 @@
                           <p class="text-white">{!! strip_tags($services_item['content']) !!}</p>
                         </div>
                         <div class="modal-body">
-                          <h4 class="text-red">{!! $services_item['stat_number'] !!}</h4>
-                          <h4 class="text-white">{!! $services_item['stat_title'] !!}</h4>
+                          <h4 class="text-white modal-title">{!! $services_item['stat_title'] !!}</h4>
                           <p class="text-white">{!! $services_item['stat_description'] !!}</p>
                         </div>
                     </div>

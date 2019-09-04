@@ -12,8 +12,7 @@
     </section>
     <section id="services">
       <div class="container">
-        <h3 class="text-red">01</h3>
-        <h1><?php echo $services_fields->services_title; ?></h1>
+        <h1><span class="text-red">01</span> <?php echo $services_fields->services_title; ?></h1>
         <p><?php echo $services_fields->services_description; ?></p>
         <div class="card-container my-3"> 
             <?php $__currentLoopData = $services_loop; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $services_item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -38,8 +37,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-              <h3 class="text-red">02</h3>
-              <h1 class="text-white"><?php echo $social_fields->social_title; ?></h1>
+              <h1 class="text-white"><span class="text-red">02</span> <?php echo $social_fields->social_title; ?></h1>
               <p class="text-white"><?php echo $social_fields->social_description; ?></p>
           </div>
           <div class="col-md-6">
@@ -82,8 +80,7 @@
     </section>
     <section id="people">
         <div class="container">
-          <h3 class="text-red">03</h3>
-          <h1><?php echo $people_fields->people_title; ?></h1>
+          <h1><span class="text-red">03</span> <?php echo $people_fields->people_title; ?></h1>
         
         <div class="row">
           <div class="col-md-6">
@@ -102,8 +99,7 @@
     </section>   
     <section id="locations">
         <div class="container">
-            <h3 class="text-red">04</h3>
-            <h1><?php echo $locations_fields->locations_title; ?></h1>
+            <h1><span class="text-red">04</span> <?php echo $locations_fields->locations_title; ?></h1>
             <p><?php echo $locations_fields->locations_description; ?></p>
             
             <div class="accordion" id="accordion-locations">
@@ -153,8 +149,7 @@
     <section id="contact" class="bg-blue py-5 container">
         <div class="row">
           <div class="col-md-6">
-              <h3 class="text-red">05</h3>
-              <h1 class="text-white"><?php echo $contact_fields->contact_title; ?></h1>
+              <h1 class="text-white"><span class="text-red">05</span> <?php echo $contact_fields->contact_title; ?></h1>
               <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
               <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php _e("Teléfono") ?>: <a class="text-white" href="tel:<?php echo $contact_fields->contact_phone; ?>"><?php echo $contact_fields->contact_phone; ?></a></p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="<?php echo $contact_fields->contact_messenger; ?>"><?php echo $contact_fields->contact_messenger; ?></a></p>
@@ -184,8 +179,7 @@
                           <p class="text-white"><?php echo strip_tags($services_item['content']); ?></p>
                         </div>
                         <div class="modal-body">
-                          <h4 class="text-red"><?php echo $services_item['stat_number']; ?></h4>
-                          <h4 class="text-white"><?php echo $services_item['stat_title']; ?></h4>
+                          <h4 class="text-white modal-title"><?php echo $services_item['stat_title']; ?></h4>
                           <p class="text-white"><?php echo $services_item['stat_description']; ?></p>
                         </div>
                     </div>

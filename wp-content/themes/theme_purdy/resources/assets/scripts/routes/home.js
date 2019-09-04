@@ -28,7 +28,7 @@ export default {
                         // $(this).parent().addClass('active');
                         var scrollAmount = 0;
                         if (window.innerWidth < 768) {
-                            scrollAmount = target.offset().top - 160
+                            scrollAmount = target.offset().top - 200
                         } else {
                             scrollAmount = target.offset().top - 100
                         }
@@ -38,6 +38,9 @@ export default {
                     }
                 }
             });
+          
+            var isScrolling;
+
         $(window).bind('scroll', function() {
 
             var currentTop = $(window).scrollTop() + 150;
@@ -52,24 +55,23 @@ export default {
                     navElem.parent().addClass('active');
                 }
             });
+            // Clear our timeout throughout the scroll
+            window.clearTimeout( isScrolling );
+            
+            // Set a timeout to run after scrolling ends
+            isScrolling = setTimeout(function() {
 
-            clearTimeout($.data(this, 'scrollTimer'));
-            $.data(this, 'scrollTimer', setTimeout(function() {
-                var offset = $('.nav-item.active').offset().left - $(window).scrollLeft();
-                if (offset > window.innerWidth && window.innerWidth < 768) {
-                    // Not in view so scroll to it
+                if(window.innerWidth < 768) {
+                    var navPos = $('.nav-item.active').offset().left;
                     $('nav').animate({
-                        scrollLeft: offset,
-                    }, 300)
-                    return false;
-                } else if (offset < 0 && window.innerWidth < 768) {
-                    $('nav').animate({
-                        scrollLeft: 0,
-                    }, 300)
-                    return false;
+                        scrollLeft: $('nav').scrollLeft() + navPos - 50,
+                    }, 500)
+                    
                 }
-                return true
-            }, 250));
+
+            }, 100);
+    
+            
         });
 
         $('.input-wrap input, .input-wrap textarea').on('focus input', function() {
