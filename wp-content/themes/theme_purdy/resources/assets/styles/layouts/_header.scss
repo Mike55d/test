@@ -128,6 +128,7 @@ nav {
             align-items:center;
             a {
                 text-indent:-999px;
+                overflow:hidden;
             }
             &:after {
                content:'';
