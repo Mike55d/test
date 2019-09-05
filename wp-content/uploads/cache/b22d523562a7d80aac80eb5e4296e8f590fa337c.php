@@ -156,19 +156,21 @@
               </div>
         </div>
     </section>  
-    <section id="contact" class="bg-blue py-5 container">
-        <div class="row">
-          <div class="col-md-6">
-              <h2 class="text-white"><span class="text-red">05</span> <?php echo $contact_fields->contact_title; ?></h2>
-              <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
-              <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php _e("Teléfono") ?>: <a class="text-white" href="tel:<?php echo $contact_fields->contact_phone; ?>"><?php echo $contact_fields->contact_phone; ?></a></p>
-              <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="<?php echo $contact_fields->contact_messenger; ?>"><?php echo $contact_fields->contact_messenger; ?></a></p>
-          </div>
-          <div class="col-md-6">
-              <h3 class="text-white">
-                <?php _e("Envíanos un mensaje") ?>
-              </h3>
-              <?= do_shortcode($contact_fields->contact_form); ?>
+    <section id="contact" class="bg-blue py-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-white"><span class="text-red">05</span> <?php echo $contact_fields->contact_title; ?></h2>
+                <p class="text-white"><?php echo $contact_fields->contact_description; ?></p>
+                <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> <?php _e("Teléfono") ?>: <a class="text-white" href="tel:<?php echo $contact_fields->contact_phone; ?>"><?php echo $contact_fields->contact_phone; ?></a></p>
+                <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="<?php echo $contact_fields->contact_messenger; ?>"><?php echo $contact_fields->contact_messenger; ?></a></p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-white">
+                  <?php _e("Envíanos un mensaje") ?>
+                </h3>
+                <?= do_shortcode($contact_fields->contact_form); ?>
+            </div>
           </div>
         </div>
     </section>   
