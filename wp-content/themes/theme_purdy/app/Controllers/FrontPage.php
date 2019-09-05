@@ -93,7 +93,8 @@ class FrontPage extends Controller
             'social_title' => get_field('social_title'),
             'social_description' => get_field('social_description'),
             'social_video' => get_field('social_video'),
-            'social_video_thumbnail' => get_field('social_video_thumbnail')
+            'social_video_thumbnail' => get_field('social_video_thumbnail'),
+            'certification_logos' => get_field('certification_logos')
         );
     }
 

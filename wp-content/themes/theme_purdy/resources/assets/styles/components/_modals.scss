@@ -10,11 +10,17 @@
     position: relative;
     .close {
         position: absolute;
-        top: 5px;
-        right: 5px;
+        top: 0px;
+        right: 0px;
         z-index: 99;
+        width:35px;
+        height:35px;
+        background-color:$red;
         opacity: 1;
-        transform: rotate(45deg);
+        padding:5px;
+        i {
+            transform: rotate(45deg);
+        }
     }
 }
 

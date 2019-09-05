@@ -158,6 +158,11 @@ export default {
                 });
             }
         })
+
+        $('.lang-toggle').on('click', function(e){
+            e.preventDefault();
+            $('.language-switcher').toggleClass('open');
+        })
     },
     finalize() {
         // JavaScript to be fired on the home page, after the init JS

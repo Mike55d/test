@@ -171,4 +171,7 @@ pll_register_string('Siguiente', 'Siguiente', 'theme-purdy');
 pll_register_string('Keywords', 'Keywords', 'theme-purdy');
 
 
+pll_register_string('Certificaciones', 'Certificaciones', 'theme-purdy');
+
+
 

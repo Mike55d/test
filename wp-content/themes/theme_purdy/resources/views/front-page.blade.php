@@ -17,7 +17,7 @@
     </section>
     <section id="services">
       <div class="container">
-        <h1><span class="text-red">01</span> {!! $services_fields->services_title !!}</h1>
+        <h2><span class="text-red">01</span> {!! $services_fields->services_title !!}</h2>
         <p>{!! $services_fields->services_description !!}</p>
         <div class="card-container my-3"> 
             @foreach($services_loop as $services_item)
@@ -42,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-              <h1 class="text-white"><span class="text-red">02</span> {!! $social_fields->social_title !!}</h1>
+              <h2 class="text-white"><span class="text-red">02</span> {!! $social_fields->social_title !!}</h2>
               <p class="text-white">{!! $social_fields->social_description !!}</p>
           </div>
           <div class="col-md-6">
@@ -82,9 +82,19 @@
         </div>
       </div>
     </section>
+    <section>
+      <div class="container">
+        <h3>@php _e("Certificaciones") @endphp</h3>
+        <ul class="certification-logos">
+          @foreach ($social_fields->certification_logos as $logo )
+            <li class="certification-item"><img alt="{!! $logo['certification_name'] !!}" src="{!! $logo['certification_logo'] !!}"></li>
+          @endforeach
+        </ul>  
+      </div>
+    </section>
     <section id="people">
         <div class="container">
-          <h1><span class="text-red">03</span> {!! $people_fields->people_title !!}</h1>
+          <h2><span class="text-red">03</span> {!! $people_fields->people_title !!}</h2>
         
         <div class="row">
           <div class="col-md-6">
@@ -103,7 +113,7 @@
     </section>   
     <section id="locations">
         <div class="container">
-            <h1><span class="text-red">04</span> {!! $locations_fields->locations_title !!}</h1>
+            <h2><span class="text-red">04</span> {!! $locations_fields->locations_title !!}</h2>
             <p>{!! $locations_fields->locations_description !!}</p>
             
             <div class="accordion" id="accordion-locations">
@@ -152,7 +162,7 @@
     <section id="contact" class="bg-blue py-5 container">
         <div class="row">
           <div class="col-md-6">
-              <h1 class="text-white"><span class="text-red">05</span> {!! $contact_fields->contact_title !!}</h1>
+              <h2 class="text-white"><span class="text-red">05</span> {!! $contact_fields->contact_title !!}</h2>
               <p class="text-white">{!! $contact_fields->contact_description !!}</p>
               <p class="text-white"><i class="icn icn-1 icn-phone-white"></i> @php _e("Teléfono") @endphp: <a class="text-white" href="tel:{!! $contact_fields->contact_phone !!}">{!! $contact_fields->contact_phone !!}</a></p>
               <p class="text-white"><i class="icn icn-1 icn-messenger"></i> Messenger: <a target="_blank" class="text-white" href="{!! $contact_fields->contact_messenger !!}">{!! $contact_fields->contact_messenger !!}</a></p>

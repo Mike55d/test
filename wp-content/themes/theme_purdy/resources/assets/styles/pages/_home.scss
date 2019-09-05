@@ -31,5 +31,18 @@ section {
         left: calc(50% - 30px);
         background-color: $red;
         border-radius: 50%;
+        transition:all 0.3s ease;
+        i {
+            transition:all 0.3s ease;
+        }
+    }
+    &:hover {
+        .play-btn {
+            transform:scale(0.9);
+            transform-origin:center;
+            i {
+                transform:scale(1.2);
+            }
+        }
     }
 }

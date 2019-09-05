@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>spain</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.Atomo/Header/-Desktop" transform="translate(-1245.000000, -37.000000)" fill-rule="nonzero">
+            <g id="spain" transform="translate(1245.000000, 37.000000)">
+                <path d="M0,12.8 C0,14.3657 0.28165,15.8655 0.79615,17.25215 L12.8,18.3652 L24.80385,17.25215 C25.31835,15.8655 25.6,14.3657 25.6,12.8 C25.6,11.2343 25.31835,9.7345 24.80385,8.34785 L12.8,7.2348 L0.79615,8.34785 C0.28165,9.7345 0,11.2343 0,12.8 Z" id="Path" fill="#FFDA44"></path>
+                <g id="Group" transform="translate(0.750000, 0.000000)" fill="#D80027">
+                    <path d="M24.05385,8.34785 C22.2453,3.47365 17.55355,0 12.05,0 C6.54645,0 1.8547,3.47365 0.04615,8.34785 L24.05385,8.34785 Z" id="Path"></path>
+                    <path d="M0.04615,17.25215 C1.8547,22.12635 6.54645,25.6 12.05,25.6 C17.55355,25.6 22.2453,22.12635 24.05385,17.25215 L0.04615,17.25215 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
