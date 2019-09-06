@@ -37,6 +37,7 @@ class App extends Controller
             'facebook' => get_field('facebook', 'options'),
             'twitter' => get_field('twitter', 'options'),
             'youtube' => get_field('youtube', 'options'),
+            'linkedin' => get_field('linkedin', 'options'),
             'terms_and_conditions' => get_field('terms_and_conditions', 'options'),
             'instagram' => get_field('instagram', 'options'),
             'privacy_policy' => get_field('privacy_policy', 'options'),

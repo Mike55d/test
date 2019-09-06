@@ -3,6 +3,7 @@
     <h3>Social</h3>
     <ul class="footer-social-links">
         <li><a target="_blank" href="{!! $footer_fields->facebook !!}"><i class="icn icn-2 icn-facebook"></i></a></li>
+        <li><a target="_blank" href="{!! $footer_fields->linkedin !!}"><i class="icn icn-2 icn-linkedin"></i></a></li>
         {{-- <li><a target="_blank" href="{!! $footer_fields->twitter !!}"><i class="icn icn-2 icn-twitter"></i></a></li>
         <li><a target="_blank" href="{!! $footer_fields->youtube !!}"><i class="icn icn-2 icn-youtube"></i></a></li>
         <li><a target="_blank" href="{!! $footer_fields->instagram !!}"><i class="icn icn-2 icn-instagram"></i></a></li> --}}
