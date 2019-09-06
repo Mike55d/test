@@ -24,11 +24,11 @@ export default {
                     if (target.length) {
                         // Only prevent default if animation is actually gonna happen
                         event.preventDefault();
-                        // $('.nav-item').removeClass('active');
-                        // $(this).parent().addClass('active');
+                        $('.nav-item').removeClass('active');
+                        $(this).parent().addClass('active');
                         var scrollAmount = 0;
                         if (window.innerWidth < 768) {
-                            scrollAmount = target.offset().top - 200
+                            scrollAmount = target.offset().top - 140
                         } else {
                             scrollAmount = target.offset().top - 100
                         }
