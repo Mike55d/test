@@ -44,7 +44,7 @@ export default {
         $(window).bind('scroll', function() {
 
             var currentTop = $(window).scrollTop() + 150;
-            var elems = $('section');
+            var elems = $('.section');
             elems.each(function() {
                 var elemTop = $(this).offset().top;
                 var elemBottom = elemTop + $(this).height();
@@ -65,11 +65,11 @@ export default {
                     var navPos = $('.nav-item.active').offset().left;
                     $('nav').animate({
                         scrollLeft: $('nav').scrollLeft() + navPos - 50,
-                    }, 500)
+                    }, 200)
                     
                 }
 
-            }, 100);
+            }, 50);
     
             
         });

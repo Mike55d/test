@@ -7,7 +7,7 @@
 
 @section('content')
   <div class="page-home">
-    <section id="top">
+    <section id="top" class="section">
       <div class="hero d-md-none" style="background-image:url('{!! $hero_fields->hero_mobile !!}');">
         {!! $hero_fields->hero_text !!}
       </div>
@@ -15,7 +15,7 @@
         {!! $hero_fields->hero_text !!}
       </div>
     </section>
-    <section id="services">
+    <section id="services" class="section">
       <div class="container">
         <h2><span class="text-red">01</span> {!! $services_fields->services_title !!}</h2>
         <p>{!! $services_fields->services_description !!}</p>
@@ -38,7 +38,8 @@
         </div>
       </div>
     </section>
-    <section id="social" class="bg-blue py-5">
+    <div class="section" id="social">
+    <section class="bg-blue py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -92,7 +93,8 @@
         </ul>  
       </div>
     </section>
-    <section id="people">
+    </div>
+    <section id="people" class="section">
         <div class="container">
           <h2><span class="text-red">03</span> {!! $people_fields->people_title !!}</h2>
         
@@ -111,7 +113,7 @@
         </div>
       </div>
     </section>   
-    <section id="locations">
+    <section id="locations" class="section">
         <div class="container">
             <h2><span class="text-red">04</span> {!! $locations_fields->locations_title !!}</h2>
             <p>{!! $locations_fields->locations_description !!}</p>
@@ -159,7 +161,7 @@
               </div>
         </div>
     </section>  
-    <section id="contact" class="bg-blue py-5">
+    <section id="contact" class="section bg-blue py-5">
       <div class="container">
           <div class="row">
             <div class="col-md-6">
