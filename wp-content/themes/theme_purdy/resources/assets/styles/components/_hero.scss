@@ -36,5 +36,8 @@
     }
     p {
         font-size: 0.6em;
+        @include bp (md) {
+            font-size: 1.1em;
+        }
     }
 }
