@@ -54,7 +54,7 @@ spec:
           #             cpu: "500m"
           ports:
             - containerPort: 80
-              name: prdylding-http
+              name: gprdylding-http
       volumes:
         - name: disk1-pvc-nfs
           persistentVolumeClaim:

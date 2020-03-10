@@ -136,3 +136,37 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+
+/**
+ * Return the base url 
+ * @return string
+ */
+function get_base_url() {
+    // output: /myproject/index.php
+    $currentPath = $_SERVER['PHP_SELF']; 
+    // output: Array ( [dirname] => /myproject [basename] => index.php [extension] => php [filename] => index ) 
+    $pathInfo = pathinfo($currentPath); 
+    // output: localhost
+    $hostName = $_SERVER['HTTP_HOST']; 
+    // output: http://
+    $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,5))=='https://'?'https://':'http://';
+    // return: http://localhost/myproject/
+    return $protocol.$hostName.$pathInfo['dirname']."/";
+}
+
+/**
+ * Returns either a #hash or a complete url/#hash depending on current url
+ * @param string $hash an url hash
+ * @return string
+ */
+function get_navlink_href($hash) {
+    // check if current url is language only... e.g. /es/ || /en/
+    if (preg_match('/^\/\w{2}\/$/', $_SERVER['REQUEST_URI'])) {
+        // we are in home page so return only hash
+        return $hash;
+    } else {
+        // we are in some other page, return complete home url
+        return get_base_url().$hash;
+    }
+}

@@ -13,6 +13,7 @@
         <a class="logo" href="#top">Grupo Purdy Motor</a>
         <ul class="footer-social-links">
             {{-- <li><a target="_blank" href="{!! $footer_fields->privacy_policy !!}">@php _e('Reglamento') @endphp</a></li> --}}
+            <li><a href="<?php echo get_base_url() . "notas-de-prensa"; ?>">@php _e('Prensa') @endphp</a></li>
             <li><a target="_blank" href="{!! $footer_fields->terms_and_conditions !!}">@php _e('Términos y Condiciones') @endphp</a></li>
             <li><a target="_blank" href="{!! $footer_fields->cookies !!}">Cookies</a></li>
         </ul>

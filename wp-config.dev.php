@@ -101,9 +101,9 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true );
-define('WP_DEBUG_LOG_DISPLAY', true );
-define('SAVEQUERIES', true );
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_LOG_DISPLAY', true);
+define('SAVEQUERIES', false);
 
 define( 'WPMS_ON', true );
 define( 'WPMS_SMTP_PASS', 'Toyota20174' );
