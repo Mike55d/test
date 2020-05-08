@@ -28,7 +28,7 @@ define('WP_MEMORY_LIMIT', '10M');
 define( 'WP_MAX_MEMORY_LIMIT', '10M' );
 
 
-$SITE_URL = 'https://dev.grupopurdy.org';
+$SITE_URL = 'https://dev-grupopurdy.devdoubledigit.com';
 
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
     $_SERVER['HTTPS'] = 'on';
@@ -45,7 +45,7 @@ define('DB_NAME', 'db_grupopurdy_landing');
 define('DB_USER', 'usr_grupopurdy_landing');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'ERczYB8m!u8auGt5EbwhzBEzIv@xCzHH');
+define('DB_PASSWORD', 'At$uJmCV@WvPGjf#9ya!hHVE0r78AwNK');
 
 /** MySQL hostname */
 define('DB_HOST', 'mysql');

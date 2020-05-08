@@ -10,6 +10,15 @@
 
       </div>
     </section>
+    <section id="logos" class="section">
+      <div class="container">
+        <div class="card-container my-3">
+          <div class="card card-logo"><img src="/wp-content/themes/theme_purdy/img/purdy_logo.svg" alt="Purdy Logo"></div>
+          <div class="card card-logo"><img src="/wp-content/themes/theme_purdy/img/logo_purdy_mobility.png" alt="Purdy Mobility Logo"></div>
+          <div class="card card-logo"><img src="/wp-content/themes/theme_purdy/img/automotriz_logo.svg" alt="Automotriz Logo"></div>
+        </div>
+      </div>
+    </section>
     <section id="services" class="section">
       <div class="container">
         <h2><span class="text-red">01</span> <?php echo $services_fields->services_title; ?></h2>

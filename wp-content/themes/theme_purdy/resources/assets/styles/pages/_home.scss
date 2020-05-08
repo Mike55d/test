@@ -16,6 +16,15 @@ section {
     padding:0;
 }
 
+#logos {
+    img {
+        @include bp (md) {
+            height: 80px;
+        }
+        height: 41px;
+    }
+}
+
 .card-container {
     display: flex;
     justify-content: space-around;
