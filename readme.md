@@ -145,4 +145,5 @@ Las construcciones de desarrollo, características y solicitud de extracción se
 
 ## Config the theme
 
+** Use NodeJS 11.11.0
 Go to /wp-content/themes/[theme_name]/README.md

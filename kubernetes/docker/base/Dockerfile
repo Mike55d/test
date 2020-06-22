@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM node:11.11.0-alpine
 
 MAINTAINER Leonardo Monge García <leonardo.monge@creativedrive.com>
 

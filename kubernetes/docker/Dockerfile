@@ -10,7 +10,22 @@ ENV APP_ENV=$BUILD_ENV
 
 RUN echo "ipv6" >> /etc/modules
 
-RUN apk --update --no-cache add git && rm -rf /var/cache/apk/*
+RUN apk --update --no-cache add git python2 && rm -rf /var/cache/apk/* \
+    && apk add --no-cache \
+          libpng \
+          gcc \
+          g++ \
+          libc-dev \
+          make \
+          openssl-dev \
+          pcre-dev \
+          zlib-dev \
+          linux-headers \
+          curl \
+          gnupg1 \
+          libxslt-dev \
+          gd-dev \
+          geoip-dev
 
 COPY ./kubernetes/docker/utils/start-httpd /usr/local/bin/start-httpd
 
@@ -20,7 +35,9 @@ COPY . /opt/app
 
 WORKDIR /opt/app/wp-content/themes/theme_purdy
 
-RUN composer install
+RUN composer install &&\
+     yarn &&\
+     yarn run build:production
 
 WORKDIR /opt/app
 
@@ -36,7 +53,23 @@ RUN cp "wp-config.${BUILD_ENV}.php" config_template &&\
 
 RUN cp ".htaccess.${BUILD_ENV}" .htaccess
 
-RUN apk del git &&  rm -rf kubernetes && rm -rf /var/cache/apk/*
+RUN apk del git python2 && rm -rf kubernetes \
+    && apk del \
+          libpng \
+          gcc \
+          g++ \
+          libc-dev \
+          make \
+          openssl-dev \
+          pcre-dev \
+          zlib-dev \
+          linux-headers \
+          curl \
+          gnupg1 \
+          libxslt-dev \
+          gd-dev \
+          geoip-dev \
+          && rm -rf /var/cache/apk/*
 
 EXPOSE 80 443 9000
 

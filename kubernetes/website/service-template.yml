@@ -36,9 +36,9 @@ spec:
         name: grupopurdy-landing
     spec:
       imagePullSecrets:
-        - name: toyotacr-container-registry
+        - name: ${CONTAINER_REGISTRY_SECRET_NAME}
       containers:
-        - image: container-registry.grupopurdy.org:4567/toyotacr/grupo-purdy-landing:${IMAGE_TAG}
+        - image: ${CONTAINER_REGISTRY}/${CONTAINER_NAME}:${VERSION_TAG}
           name: grupopurdy-landing
           imagePullPolicy: Always
           volumeMounts:
