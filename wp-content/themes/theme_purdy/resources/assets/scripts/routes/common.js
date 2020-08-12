@@ -55,6 +55,25 @@ export default {
                 });
             }
         });
+
+        $('.expand').on('click', function(e) {
+            window.setTimeout(function() {
+                var link = $(e.target).closest('a')
+                if (window.location.pathname.match('/es/*')) {
+                    if ($(link).hasClass('collapsed')) {
+                        $(link).find('span').text('Ver más');
+                    } else {
+                        $(link).find('span').text('Ver menos');
+                    }
+                } else if (window.location.pathname.match('/en/*')) {
+                    if ($(link).hasClass('collapsed')) {
+                        $(link).find('span').text('See more');
+                    } else {
+                        $(link).find('span').text('See less');
+                    }
+                }
+            }, 100)
+        });
     },
     finalize() {
         // JavaScript to be fired on all pages, after page specific JS is fired

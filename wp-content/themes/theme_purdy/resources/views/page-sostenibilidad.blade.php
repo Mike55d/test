@@ -84,9 +84,20 @@ Template Name: Sostenibilidad
                                         {!! $social_item['thumbnail'] !!}
                                     </div>
                                     <h4 class="text-white my-3">{!! $social_item['title'] !!}</h4>
+                                    
                                     <div class="text-white">
                                         {!! $social_item['content'] !!}
-                                        {!! $social_item['progress'] !!}
+                                        <h5 class="text-red my-2">
+                                            <strong>@php _e("Nuestros avances a un año") @endphp</strong>
+                                        </h5>
+                                        <div class="collapse" id="social-collapse{!! $loop->index !!}">
+                                            {!! $social_item['progress'] !!}
+                                        </div>
+
+                                        <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white expand">
+                                            <span>@php _e("Ver más") @endphp</span> 
+                                            <i class="icn icn-1 icn-chevron"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

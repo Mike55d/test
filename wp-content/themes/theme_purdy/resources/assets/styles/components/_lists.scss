@@ -147,9 +147,9 @@
         }
         img {
             height:auto;
-            width:160px;
+            width:180px;
             @include bp (md) {
-                width:140px;
+                width:160px;
             }
         }
     }

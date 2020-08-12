@@ -40,13 +40,13 @@
     position: relative;
     z-index: 2;
     &:before {
-        top: -10%;
+        top: -5px;
         right: -10px;
         position: absolute;
         z-index: -1;
         display: block;
         content: '';
-        height: 120%;
+        height: 30px;
         width: 30px;
         background-color: $red;
         transform-origin: center right;
@@ -55,8 +55,13 @@
     }
     &:hover {
         &:before {
-            transform: scaleX(3);
+            transform: scaleX(4.7);
             background-color: darken($red, 10%);
+        }
+    }
+    &[aria-expanded="true"]:hover {
+        &:before {
+            transform: scaleX(5.7);
         }
     }
     &:active {

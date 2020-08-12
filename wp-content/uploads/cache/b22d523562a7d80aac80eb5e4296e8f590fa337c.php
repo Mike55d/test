@@ -62,7 +62,7 @@
           <div class="col-md-6">
               <h2 class="text-white"><span class="text-red">02</span> <?php echo $social_fields->social_title; ?></h2>
               <p class="text-white"><?php echo $social_fields->social_description; ?></p>
-              <a class="button button-primary button-sustainability" href="/<?php _e('Sostenibilidad') ?>"><?php _e('Ver más') ?></a>
+               <?php if(get_locale() == "es_CR"): ?> <a class="button button-primary button-sustainability" href="/<?php _e('Sostenibilidad') ?>"><?php _e('Ver más') ?></a> <?php endif; ?>
           </div>
           <div class="col-md-6">
             <a class="video-container" href="#VideoModal" data-toggle="modal" data-target="#VideoModal">

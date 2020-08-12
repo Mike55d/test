@@ -14,15 +14,13 @@
 
 
     .introduction-section {
+        text-align: center;
         h3 {
             color: $red;
             font-size: 1.5em;
         }
         p {
             width: 100%;
-            @include bp (md) {
-                width: 65%;
-            }
         }
     }
 
@@ -61,9 +59,11 @@
                 h3 {
                     width: 100%;
                     font-size: 1.1rem;
+                    margin-bottom: 10%;
                     @include bp (md) {
                         width: 75%;
                         font-size: 1.8rem;
+                        margin-bottom: 4%;
                     }
                 }
                 .container-buttons {
@@ -73,7 +73,9 @@
                     }
                     .button {
                         width: 100%;
+                        margin-left: 0px;
                         @include bp (md) {
+                            margin-left: 10px;
                             width: auto;
                         }
                     }
@@ -87,6 +89,12 @@
                 @include bp (md) {
                     padding: 15px;
                     margin-top: 0px;
+                }
+                h3 {
+                    margin-bottom: 7%; 
+                    @include bp (md) {
+                        margin-bottom: 4%; 
+                    }
                 }
                 ul {
                     display: inline-block;
@@ -105,7 +113,48 @@
     }
 
     .sustainability-section {
+        .container {
+            padding: 0;
+            @include bp (md) {
+                padding: 0 15px;
+                max-width: 90%;
+            }
+
+            .video-container {
+                .play-btn {
+                    height: 70px;
+                    width: 70px;
+                    @include bp (md) {
+                        width: 120px;
+                        height: 120px;
+                        top: calc(50% - 50px);
+                        left: calc(50% - 50px);
+                    }
+                    i {
+                        width: 45px;
+                        height: 35px;
+                        @include bp (md) {
+                            height: 90px;
+                            width: 40px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        h2 {
+            margin-bottom: 10%;
+            padding: 0 15px;
+            @include bp (md) {
+                margin-bottom: 7%;
+                padding: 0;
+            }
+        }
         .description {
+            padding: 0 15px;
+            @include bp (md) {
+                padding: 0;
+            }
             p {
                 color: $white;
             }
@@ -115,9 +164,18 @@
         }
     }
 
+    .certification-logos {
+        margin: 50px 0 45px;
+        @include bp (md) {
+            margin: 50px 0 60px;
+        }
+    }
+
     .documents-section {
+        padding-top: 0px;
+        margin-top: 0px;
         .card {
-            margin: 0px;
+            margin: 0px 0px 1px;
             @include bp (md) {
                 margin: 10px;
             }
