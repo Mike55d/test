@@ -144,21 +144,6 @@ export default {
             nextArrow: $('.next'),
         });
 
-        $(window).on('resize load', function() {
-            if (window.innerWidth >= 768 && $('.slider-multi.slick-initialized').length) {
-                $('.slider-multi').slick('unslick')
-            } else if (window.innerWidth < 768 && !$('.slider-multi.slick-initialized').length) {
-                $('.slider-multi').slick({
-                    dots: true,
-                    arrows: false,
-                    infinite: false,
-                    centerMode: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                });
-            }
-        })
-
         $('.lang-toggle').on('click', function(e){
             e.preventDefault();
             $('.language-switcher').toggleClass('open');

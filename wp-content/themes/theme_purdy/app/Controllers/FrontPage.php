@@ -94,6 +94,8 @@ class FrontPage extends Controller
             'social_description' => get_field('social_description'),
             'social_video' => get_field('social_video'),
             'social_video_thumbnail' => get_field('social_video_thumbnail'),
+            'brands_logos_active' => get_field('brands_logos_active'),
+            'brands_logos' => get_field('brands_logos'),
             'certification_logos' => get_field('certification_logos')
         );
     }

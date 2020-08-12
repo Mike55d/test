@@ -24,6 +24,19 @@
         </div>
       </div>
     </section>
+    @if($social_fields->brands_logos_active)
+      <section id="brands">
+        <div class="container">
+          <h3>Nuestras marcas</h3>
+          <p>Seleccione la marca de su interés para accesar el sitio web correspondiente.</p>
+          <ul class="brands-logos">
+            @foreach ($social_fields->brands_logos as $brand )
+              <li class="brand-item"><img alt="{!! $brand['brand_name'] !!}" src="{!! $brand['brand_logo'] !!}"></li>
+            @endforeach
+          </ul>  
+        </div>
+      </section>
+    @endif
     <section id="services" class="section">
       <div class="container">
         <h2><span class="text-red">01</span> {!! $services_fields->services_title !!}</h2>
@@ -54,6 +67,7 @@
           <div class="col-md-6">
               <h2 class="text-white"><span class="text-red">02</span> {!! $social_fields->social_title !!}</h2>
               <p class="text-white">{!! $social_fields->social_description !!}</p>
+              <a class="button button-primary button-sustainability" href="/@php _e('Sostenibilidad') @endphp">@php _e('Ver más') @endphp</a>
           </div>
           <div class="col-md-6">
             <a class="video-container" href="#VideoModal" data-toggle="modal" data-target="#VideoModal">

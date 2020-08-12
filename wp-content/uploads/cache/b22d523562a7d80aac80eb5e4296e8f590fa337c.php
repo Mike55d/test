@@ -19,6 +19,19 @@
         </div>
       </div>
     </section>
+    <?php if($social_fields->brands_logos_active): ?>
+      <section id="brands">
+        <div class="container">
+          <h3>Nuestras marcas</h3>
+          <p>Seleccione la marca de su interés para accesar el sitio web correspondiente.</p>
+          <ul class="brands-logos">
+            <?php $__currentLoopData = $social_fields->brands_logos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $brand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+              <li class="brand-item"><img alt="<?php echo $brand['brand_name']; ?>" src="<?php echo $brand['brand_logo']; ?>"></li>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          </ul>  
+        </div>
+      </section>
+    <?php endif; ?>
     <section id="services" class="section">
       <div class="container">
         <h2><span class="text-red">01</span> <?php echo $services_fields->services_title; ?></h2>
@@ -49,6 +62,7 @@
           <div class="col-md-6">
               <h2 class="text-white"><span class="text-red">02</span> <?php echo $social_fields->social_title; ?></h2>
               <p class="text-white"><?php echo $social_fields->social_description; ?></p>
+              <a class="button button-primary button-sustainability" href="/<?php _e('Sostenibilidad') ?>"><?php _e('Ver más') ?></a>
           </div>
           <div class="col-md-6">
             <a class="video-container" href="#VideoModal" data-toggle="modal" data-target="#VideoModal">

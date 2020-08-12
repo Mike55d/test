@@ -117,21 +117,53 @@
     }
 }
 
-.certification-logos {
+#brands {
+    p {
+        font-size: 18px;
+        color: $dark-blue;
+        font-family: $base-font-family;
+    }
+}
+
+.certification-logos, 
+.brands-logos {
     display:flex;
     align-items:center;
     justify-content:space-around;
     flex-wrap:wrap;
     margin: 50px 0 60px;
     padding:0px;
+    
     .certification-item {
+        &:first-child {
+            margin-left: 0px;
+            @include bp (md) {
+                margin-left: -18px;
+            }
+        }
+        margin:0px;
+        @include bp (md) {
+            margin:20px;
+        }
+        img {
+            height:auto;
+            width:160px;
+            @include bp (md) {
+                width:140px;
+            }
+        }
+    }
+    .brand-item {
+        &:first-child {
+            margin-left: -18px;
+        }
         margin:20px;
         img {
             height:auto;
-            width:100px;
-             @include bp (md) {
-                  width:140px;
-             }
+            width:100%;
+            //  @include bp (md) {
+            //       width:100%;
+            //  }
         }
     }
 }

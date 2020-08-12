@@ -1,0 +1,132 @@
+/* stylelint-disable */
+
+.page-sustainability{
+    margin-top: 200px;
+    @include bp (md) {
+        margin-top: 150px;
+    }
+
+    .body-color {
+        p {
+            color: $text-color;
+        }
+    }
+
+
+    .introduction-section {
+        h3 {
+            color: $red;
+            font-size: 1.5em;
+        }
+        p {
+            width: 100%;
+            @include bp (md) {
+                width: 65%;
+            }
+        }
+    }
+
+    .page-video {
+        text-align: center;
+        margin: 50px 0px;
+        img {
+            width: 100%;
+            @include bp (md) {
+                width: 60%;
+            }
+        }
+        .play-btn {
+            @include bp (md) {
+                height: 100px;
+                width: 100px;
+                i {
+                    top: 20%;
+                    left: 5%;
+                    position: relative;
+                    height: 2.5em;
+                    width: 2.5em;
+                }
+            }
+        }
+    }
+
+    .reports-section {
+        margin: 7% 0;
+        .container {
+            display: block;
+            @include bp (md) {
+                display: flex;
+            }
+            .actual-report {
+                h3 {
+                    width: 100%;
+                    font-size: 1.1rem;
+                    @include bp (md) {
+                        width: 75%;
+                        font-size: 1.8rem;
+                    }
+                }
+                .container-buttons {
+                    text-align: center;
+                    @include bp (md) {
+                        text-align: left;
+                    }
+                    .button {
+                        width: 100%;
+                        @include bp (md) {
+                            width: auto;
+                        }
+                    }
+
+                }
+            }
+
+            .others-reports {
+                padding: 0px;
+                margin-top: 10%;
+                @include bp (md) {
+                    padding: 15px;
+                    margin-top: 0px;
+                }
+                ul {
+                    display: inline-block;
+                    padding: 0px;
+                    li {
+                        margin: 0;
+                        display: inline-block;
+                        a {
+                            color: $red;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .sustainability-section {
+        .description {
+            p {
+                color: $white;
+            }
+        }
+        .card-social {
+            justify-content: normal;
+        }
+    }
+
+    .documents-section {
+        .card {
+            margin: 0px;
+            @include bp (md) {
+                margin: 10px;
+            }
+            .button-collapse.collapsed i {
+                margin-right: 10px;
+                @include bp (md) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

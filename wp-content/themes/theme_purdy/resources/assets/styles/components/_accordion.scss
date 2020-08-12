@@ -17,4 +17,19 @@
         border-radius: 0;
         box-shadow: none;
     }
+    .list--download {
+        padding-left: 5%;
+        li {
+            margin: 20px 0px;
+            font-size: 16px;
+            a {
+                display: flex;
+                i {
+                    margin-right: 15px;
+                }
+            }
+            
+        }
+    }
 }
+

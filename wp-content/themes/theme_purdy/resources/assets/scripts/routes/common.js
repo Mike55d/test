@@ -27,7 +27,34 @@ export default {
         }
 
         // INIT TOOLTIP
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $(window).on('resize load', function() {
+            if (window.innerWidth >= 768 && $('.slider-multi.slick-initialized').length) {
+                $('.slider-multi').slick('unslick')
+            } else if (window.innerWidth < 768 && !$('.slider-multi.slick-initialized').length) {
+                $('.slider-multi').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: false,
+                    centerMode: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                });
+            }
+            if (window.innerWidth >= 768 && $('.certification-logos.slick-initialized').length) {
+                $('.certification-logos').slick('unslick')
+            } else if (window.innerWidth < 768 && !$('.certification-logos.slick-initialized').length) {
+                $('.certification-logos').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: false,
+                    centerMode: false,
+                    slidesToShow: 1.2,
+                    slidesToScroll: 1,
+                });
+            }
+        });
     },
     finalize() {
         // JavaScript to be fired on all pages, after page specific JS is fired
