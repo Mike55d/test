@@ -23,9 +23,9 @@
         @endif
         <li class="nav-item"><a href="<?php echo get_navlink_href('#people'); ?>">@php _e('Gente Purdy') @endphp</a></li>
         <li class="nav-item"><a href="<?php echo get_navlink_href('#locations'); ?>">@php _e('Encontranos') @endphp</a></li>
-        {{-- @if(get_locale() == "es_CR") 
+        @if(get_locale() == "es_CR") 
           <li class="nav-item {{ $pagename == "purdy-mobility-challenge" ? "active" : "" }}"><a href="{{ get_navlink_href('purdy-mobility-challenge') }}">{{ _e('Purdy Mobility') }}</a></li>
-        @endif --}}
+        @endif
         <li class="nav-item"><a href="<?php echo get_navlink_href('#contact'); ?>">@php _e('Contáctanos') @endphp</a></li>
       </ul>
   </nav>
