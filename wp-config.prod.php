@@ -106,7 +106,7 @@ define('WP_DEBUG_LOG_DISPLAY', false );
 define('SAVEQUERIES', false );
 
 define( 'WPMS_ON', true );
-define( 'WPMS_SMTP_PASS', 'Toyota20174' );
+define( 'WPMS_SMTP_PASS', 'Purdy2020.' );
 
 /* That's all, stop editing! Happy blogging. */
 
