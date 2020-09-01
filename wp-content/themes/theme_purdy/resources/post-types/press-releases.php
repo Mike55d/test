@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 Class press_releases {
     const POST_TYPE = 'press_releases';

@@ -23,7 +23,52 @@ section {
         }
         height: 41px;
     }
+
+  #tab-content-card {
+    .card-logo {
+       img {
+         @include bp (md) {
+           height: 90%;
+         }
+         height: 90%;
+       }
+     }
+    .description {
+      margin: 30px 0px;
+    }
+  }
+  #tab-card {
+    .active {
+      border: none;
+      border-bottom: 7.9px solid #ED1C23;
+    }
+    .nav-link:hover:not(.active) {
+      border: none;
+    }
+    .margin-nav-item {
+      margin-right: 200px;
+    }
+  }
 }
+
+@media screen and (max-width: 992px) {
+  #logos {
+
+    #tab-content-card {
+      .card-logo {
+        margin-top: 30px;
+      }
+    }
+    #tab-card {
+      .margin-nav-item {
+        margin-right: 50px;
+      }
+    }
+  }
+
+}
+
+
 
 .card-container {
     display: flex;

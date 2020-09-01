@@ -1,5 +1,8 @@
 <footer>
   <div class="footer-social">
+    <div class="footer-logo-mobile">
+      <a class="logo" href="#top">Grupo Purdy Motor</a>
+    </div>
     <h3>Social</h3>
     <ul class="footer-social-links">
         <li><a target="_blank" href="{!! $footer_fields->facebook !!}"><i class="icn icn-2 icn-facebook"></i></a></li>
@@ -9,7 +12,7 @@
         <li><a target="_blank" href="{!! $footer_fields->instagram !!}"><i class="icn icn-2 icn-instagram"></i></a></li> --}}
     </ul>
   </div>
-  <div class="footer-info">
+  <div class="footer-info"> 
         <a class="logo" href="#top">Grupo Purdy Motor</a>
         <ul class="footer-social-links">
             {{-- <li><a target="_blank" href="{!! $footer_fields->privacy_policy !!}">@php _e('Reglamento') @endphp</a></li> --}}

@@ -15,6 +15,43 @@
         {!! $hero_fields->hero_text !!}
       </div>
     </section>
+{{--    <section id="logos" class="section">--}}
+{{--      <div class="container">--}}
+{{--        <div class="card-container my-3">--}}
+
+{{--          <ul class="nav nav-tabs" id="tab-card" role="tablist">--}}
+{{--            @if($companies_fields)--}}
+{{--              @foreach ($companies_fields->logos as $logo )--}}
+{{--                <li class="nav-item {!! $loop->iteration == $loop->count ? '' : 'margin-nav-item' !!}" role="presentation">--}}
+{{--                  <a class="nav-link {!! $loop->index == 0 ? 'active' : '' !!} card-logo" id="{!! $logo['logo']['title'] !!}-tab" data-toggle="tab" href="#{!! $logo['logo']['title'] !!}-content" role="tab" aria-controls="{!! $logo['logo']['title'] !!}" aria-selected="true"><img src="{!! $logo['logo']['url'] !!}" alt="{!! $logo['logo']['title'] !!}"></a>--}}
+{{--                </li>--}}
+{{--              @endforeach--}}
+{{--            @endif--}}
+{{--          </ul>--}}
+{{--        </div>--}}
+
+{{--        <div class="tab-content" id="tab-content-card">--}}
+{{--          @if($companies_fields)--}}
+{{--            @foreach ($companies_fields->logos as $logo )--}}
+{{--              <div class="tab-pane fade {!! $loop->index == 0 ? 'show active' : '' !!}" id="{!! $logo['logo']['title'] !!}-content" role="tabpanel" aria-labelledby="{!! $logo['logo']['title'] !!}-tab">--}}
+{{--                <p class="text-center description">{!! $logo['description'] !!}</p>--}}
+{{--                <div class="row">--}}
+{{--                  @if($logo['mark'])--}}
+{{--                  @foreach ($logo['mark'] as $mark )--}}
+{{--                    <div class="col-md-4 col-sm-6 card-logo text-center">--}}
+{{--                      <a href="{!! $mark['url'] ? $mark['url'] : 'javascript:void(0)' !!}" target="{!! $mark['url'] ? '_blank' : '_self' !!}"><img src="{!! $mark['mark']['url'] !!}" alt="{!! $mark['mark']['title'] !!} Logo"></a>--}}
+{{--                    </div>--}}
+{{--                  @endforeach--}}
+{{--                  @endif--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            @endforeach--}}
+{{--          @endif--}}
+
+{{--        </div>--}}
+{{--      </div>--}}
+{{--    </section>--}}
+
     <section id="logos" class="section">
       <div class="container">
         <div class="card-container my-3">
@@ -24,24 +61,25 @@
         </div>
       </div>
     </section>
-    @if($social_fields->brands_logos_active)
-      <section id="brands">
-        <div class="container">
-          <h3>Nuestras marcas</h3>
-          <p>Seleccione la marca de su interés para accesar el sitio web correspondiente.</p>
-          <ul class="brands-logos">
-            @foreach ($social_fields->brands_logos as $brand )
-              <li class="brand-item"><img alt="{!! $brand['brand_name'] !!}" src="{!! $brand['brand_logo'] !!}"></li>
-            @endforeach
-          </ul>  
-        </div>
-      </section>
-    @endif
+{{--    @if($social_fields->brands_logos_active)--}}
+{{--      <section id="brands">--}}
+{{--        <div class="container">--}}
+{{--          <h3>Nuestras marcas</h3>--}}
+{{--          <p>Seleccione la marca de su interés para accesar el sitio web correspondiente.</p>--}}
+{{--          <ul class="brands-logos">--}}
+{{--            @foreach ($social_fields->brands_logos as $brand )--}}
+{{--              <li class="brand-item"><img alt="{!! $brand['brand_name'] !!}" src="{!! $brand['brand_logo'] !!}"></li>--}}
+{{--            @endforeach--}}
+{{--          </ul>--}}
+{{--        </div>--}}
+{{--      </section>--}}
+{{--    @endif--}}
+
     <section id="services" class="section">
       <div class="container">
         <h2><span class="text-red">01</span> {!! $services_fields->services_title !!}</h2>
         <p>{!! $services_fields->services_description !!}</p>
-        <div class="card-container my-3"> 
+        <div class="card-container my-3">
             @foreach($services_loop as $services_item)
               <div class="card card-service">
                   <div class="card-icon">
@@ -56,7 +94,7 @@
                   </div>
               </div>
             @endforeach
-          
+
         </div>
       </div>
     </section>
@@ -97,7 +135,7 @@
                           </ul>
                         </div>
                         <a data-toggle="collapse" href="#social-collapse{!! $loop->index !!}" role="button" aria-expanded="false" aria-controls="social-collapse{!! $loop->index !!}" class="button button-arrow text-white expand">
-                          <span>@php _e("Ver más") @endphp</span> 
+                          <span>@php _e("Ver más") @endphp</span>
                           <i class="icn icn-1 icn-chevron"></i></a>
                       </div>
                   </div>
@@ -113,14 +151,14 @@
           @foreach ($social_fields->certification_logos as $logo )
             <li class="certification-item"><img alt="{!! $logo['certification_name'] !!}" src="{!! $logo['certification_logo'] !!}"></li>
           @endforeach
-        </ul>  
+        </ul>
       </div>
     </section>
     </div>
     <section id="people" class="section">
         <div class="container">
           <h2><span class="text-red">03</span> {!! $people_fields->people_title !!}</h2>
-        
+
         <div class="row">
           <div class="col-md-6">
               <p>{!! $people_fields->people_description !!}</p>
@@ -135,12 +173,12 @@
           </div>
         </div>
       </div>
-    </section>   
+    </section>
     <section id="locations" class="section">
         <div class="container">
             <h2><span class="text-red">04</span> {!! $locations_fields->locations_title !!}</h2>
             <p>{!! $locations_fields->locations_description !!}</p>
-            
+
             <div class="accordion" id="accordion-locations">
                 @foreach($locations_loop as $location)
                   <div class="card">
@@ -158,12 +196,12 @@
                               @php _e("Teléfono") @endphp
                               {!! $location['phone'] !!}</li>
                             <li><i class="icn icn-1 icn-pin"></i><strong>
-                                @php _e("Dirección") @endphp  
+                                @php _e("Dirección") @endphp
                               </strong><br>
                               {!! $location['address'] !!}</li>
                             <li><i class="icn icn-1 icn-clock"></i><strong>
                                 @php _e("Horario de Atención") @endphp
-                              </strong> 
+                              </strong>
                               <ul>
                                 @foreach ($location['schedule'] as $sc)
                                   <li>{!!$sc['days']!!}: {!! $sc['hours'] !!}</li>
@@ -171,9 +209,9 @@
                               </ul>
                             </li>
                             <li><strong>
-                              @php _e("Ir con") @endphp : 
+                              @php _e("Ir con") @endphp :
                               <br>
-                              <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |  
+                              <a class="text-red" href="{!! $location['waze_link'] !!}" target="_blank"><i class="icn icn-1 icn-waze"></i> Waze</a> |
                               <a class="text-red" href="{!! $location['google_maps_link'] !!}" target="_blank"><i class="icn icn-1 icn-maps"></i> Google Maps</a></strong>
                             </li>
                           </ul>
@@ -183,7 +221,7 @@
                 @endforeach
               </div>
         </div>
-    </section>  
+    </section>
     <section id="contact" class="section bg-blue py-5">
       <div class="container">
           <div class="row">
@@ -201,7 +239,7 @@
             </div>
           </div>
         </div>
-    </section>   
+    </section>
   </div>
 
   <div class="modal modal-services" tabindex="-1" role="dialog" id="ServicesModal">
@@ -224,7 +262,7 @@
                         </div>
                     </div>
                     @endforeach
-                  
+
                 </div>
                 <a class="prev" href="#" role="button" data-slide="prev">
                     <i class="icn icn-1 icn-chevron" aria-hidden="true"></i> {{ _e('Anterior') }}

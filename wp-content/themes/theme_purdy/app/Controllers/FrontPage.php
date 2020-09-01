@@ -70,7 +70,7 @@ class FrontPage extends Controller
         }, $locations_items);
     }
 
-    public function heroFields() 
+    public function heroFields()
     {
         return (object) array (
             'hero_mobile' => get_field('hero_mobile'),
@@ -79,7 +79,7 @@ class FrontPage extends Controller
         );
     }
 
-    public function servicesFields() 
+    public function servicesFields()
     {
         return (object) array (
             'services_title' => get_field('services_title'),
@@ -87,7 +87,7 @@ class FrontPage extends Controller
         );
     }
 
-    public function socialFields() 
+    public function socialFields()
     {
         return (object) array (
             'social_title' => get_field('social_title'),
@@ -100,7 +100,7 @@ class FrontPage extends Controller
         );
     }
 
-    public function peopleFields() 
+    public function peopleFields()
     {
         return (object) array (
             'people_title' => get_field('people_title'),
@@ -110,7 +110,7 @@ class FrontPage extends Controller
         );
     }
 
-    public function locationsFields() 
+    public function locationsFields()
     {
         return (object) array (
             'locations_title' => get_field('locations_title'),
@@ -118,7 +118,7 @@ class FrontPage extends Controller
         );
     }
 
-    public function contactFields() 
+    public function contactFields()
     {
         return (object) array (
             'contact_title' => get_field('contact_title'),
@@ -128,6 +128,13 @@ class FrontPage extends Controller
             'contact_form' => get_field('contact_form')
         );
     }
+
+//    public function companiesFields()
+//    {
+//        return (object) array (
+//            'logos' => get_field('logos')
+//        );
+//    }
 }
 
 

@@ -26,10 +26,7 @@
 }
 
 .logo-container {
-    width: 100%;
-    @include bp (md) {
-        width: auto;
-    }
+    width: auto;
 }
 
 .logo {

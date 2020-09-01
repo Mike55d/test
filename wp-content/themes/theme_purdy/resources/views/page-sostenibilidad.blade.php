@@ -38,7 +38,7 @@ Template Name: Sostenibilidad
                 <div class="actual-report">
                     <h3>{{ $reports['report_title']}}</h3>
                     <div class="container-buttons">
-                        <a class="button-primary button" href="{{ $reports['report_actual_link'] }}"> 
+                        <a class="button-primary button" href="https://www.grupopurdy.org/wp-content/uploads/2020/08/Informe-de-Sostenibilidad-Grupo-Purdy-2019-M.pdf"> 
                             @php _e("Ver en línea") @endphp
                         </a>
                         <a class="button button-secondary" href="{{ $reports['report_actual_file'] }}"> 

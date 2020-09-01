@@ -3,7 +3,6 @@
     <h3>Social</h3>
     <ul class="footer-social-links">
         <li><a target="_blank" href="<?php echo $footer_fields->facebook; ?>"><i class="icn icn-2 icn-facebook"></i></a></li>
-        <li><a target="_blank" href="<?php echo $footer_fields->linkedin; ?>"><i class="icn icn-2 icn-linkedin"></i></a></li>
         
     </ul>
   </div>
@@ -11,7 +10,6 @@
         <a class="logo" href="#top">Grupo Purdy Motor</a>
         <ul class="footer-social-links">
             
-            <li><a href="<?php echo get_base_url() . "notas-de-prensa"; ?>"><?php _e('Prensa') ?></a></li>
             <li><a target="_blank" href="<?php echo $footer_fields->terms_and_conditions; ?>"><?php _e('Términos y Condiciones') ?></a></li>
             <li><a target="_blank" href="<?php echo $footer_fields->cookies; ?>">Cookies</a></li>
         </ul>
